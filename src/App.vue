@@ -1,85 +1,87 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+
+import { reactive } from 'vue';
+
+type LinkDefinition = {
+  name: string;
+  path: string;
+}
+
+interface Links {
+  home : LinkDefinition,
+  github : LinkDefinition,
+  linkedin : LinkDefinition,
+  instagram : LinkDefinition,
+}
+
+const navLinks = reactive<Links>({
+  home: {
+    name: 'Home',
+    path: '/'
+  },
+  github: {
+    name: 'Github',
+    path: 'https://github.com/clew-bot'
+  },
+  linkedin: {
+    name: 'LinkedIn',
+    path: 'https://www.linkedin.com/in/chad-l-7586711a0/'
+  },
+  instagram: {
+    name: 'Instagram',
+    path: 'https://www.instagram.com/chad.lew/'
+  }
+});
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <div class="links-container">
+        <div class="link" v-for="links in navLinks" :key="links.name">
+          <a :href="links.path" class="link" target="_blank">{{ links.name }}</a>
+      </div>
+    </div>
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+  .link {
+    padding: 0 2.2rem 1rem;
+    background: rgb(76, 108, 80);
+    font-weight: bolder;
+    color: white;
+    text-decoration: underline;
+    transform: skewY(-5deg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+  .links-container {
+    display: flex;
+    justify-content: space-between;
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
+  }
+.wrapper {
+  padding: 10px 70px;
+  margin: 0 auto;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+
+  padding: 3rem;
+  background: rgb(245, 245, 245);
 }
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
+@media screen and (max-width: 768px) {
+  .links-container  {
     flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    flex-direction: column;
   }
 }
+  
+
 </style>
