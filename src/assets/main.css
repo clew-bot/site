@@ -1,11 +1,13 @@
 @import "./base.css";
 
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
+  background: rgb(245, 245, 245);
   font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a,

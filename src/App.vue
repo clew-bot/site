@@ -30,7 +30,7 @@ const navLinks = reactive<Links>({
   },
   instagram: {
     name: 'Instagram',
-    path: 'https://www.instagram.com/chad.lew/'
+    path: 'https://www.instagram.com/chad.lew/',
   }
 });
 
