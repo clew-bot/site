@@ -21,41 +21,17 @@
     import reactLogo from "@/assets/reactLogo.png";
     import handlebarsLogo from "@/assets/handlebarsLogo.webp";
 
-
-
-
-
-
     import vuetifyLogo from "@/assets/vuetifyLogo.png";
     import chakraLogo from "@/assets/chakraLogo.png";
     import muiLogo from "@/assets/muiLogo.png";
     import tailwindLogo from "@/assets/tailwindLogo.png";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 <template>
-  <section>
+  <section class="section">
     <h1>Experience</h1>
     <p>I've worked with a handful of amazing technologies over the years. </p>
     <div class="icon-container">
-      <div>
+      <div class="col">
         <h2>Languages</h2>
       
         <img :src="tsLogo" alt="" class="icons">
@@ -66,14 +42,14 @@
         <img :src="pythonIcon" alt="" class="icons">
 
       </div>
-      <div>
+      <div class="col">
         <h2>Servers</h2>
         <img :src="nodeLogo" alt="" class="icons node">
         <img :src="expressLogo" alt="" class="icons">
         <img :src="djangoIcon" alt="" class="icons">
 
       </div>
-      <div>
+      <div class="col">
         <h2>Libraries/Frameworks</h2>
         <img :src="vueLogo" alt="" class="icons">
         <img :src="reactLogo" alt="" class="icons">
@@ -83,77 +59,66 @@
         <img :src="muiLogo" alt="" class="icons">
 
       </div>
-      <div>
+      <div class="col">
         <h2>Databases</h2>
         <img :src="mdbLogo" alt="" class="icons">
         <img :src="postLogo" alt="" class="icons">
   
 
       </div>
-      <div>
+      <div class="col">
         <h2>Devops</h2>
         <img :src="dockerLogo" alt="" class="icons">
         <img :src="awsLogo" alt="" class="icons">
       </div>
-      <div>
+      <div class="col">
         <h2>Agile Methodologies</h2>
         <img :src="cuLogo" alt="" class="icons">
         <img :src="trelloIcon" alt="" class="icons">
         <img :src="githubLogo" alt="" class="icons">
 
       </div>
-      <div>
+      <div class="col">
         <h2>Other</h2>
         <img :src="sqlLogo" alt="" class="icons node">
         <img :src="nosqlLogo" alt="" class="icons">
         <img :src="handlebarsLogo" alt="" class="icons">
 
       </div>
-   
-
-   
-
-  
-
-
-
-    
-  
-
-
-
-
-
-
-    <div class="css-libraries">
-    
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
   </section>
 </template>
 
 
 
 <style>
+  .col > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: #f5f5f5;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+section {
+  color: black;
+}
+
 
 .icons + .node {
   width: 300px;

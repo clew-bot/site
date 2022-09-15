@@ -1,5 +1,8 @@
 <script setup lang="ts" >
-    import { reactive, ref } from 'vue';
+    import { reactive, ref, computed, watch } from 'vue';
+    import { defineStore } from 'pinia';
+    import { useCounterStore, useThemeStore } from "../stores/counter";
+
     import Macbook from '@/assets/macbook.jpg'
 
     interface Description {
@@ -20,6 +23,17 @@
     const clickHandler = () => {
         clicked.value = !clicked.value;
     }
+
+    const themeStore = useThemeStore();
+
+    const selected = ref("");
+    watch(selected, (val) => {
+        console.log("Watching! ", val)
+        themeStore.toggleTheme(val);
+    });
+
+
+
 </script>
 
 <template>
@@ -40,6 +54,13 @@
           ><i>Resume</i></button
         >
       </div>
+      <p>{{selected}}</p>
+      <select name="Colors" id="colors" v-model="selected">
+        <option disabled value="">Please select one</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
         </div>
         <div class="rightSide">
             <img class="macbook" :src="Macbook" alt="Macbook" />
@@ -115,6 +136,7 @@
 
 .description {
     padding: 20px 16px 80px 16px;
+    color: black;
 
 }
 
@@ -123,6 +145,7 @@
     font-weight: bolder;
     text-align: left;
     padding: 1rem;
+    color: black;
 }
 
 @keyframes clickDownAndUp {
