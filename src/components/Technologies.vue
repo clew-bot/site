@@ -52,40 +52,81 @@
     </script>
 <template>
   <section>
-    <h1>Experienced with</h1>
+    <h1>Experience</h1>
+    <p>I've worked with a handful of amazing technologies over the years. </p>
     <div class="icon-container">
-      <div></div>
-    <img :src="tsLogo" alt="" class="icons">
-    <img :src="jsLogo" alt="" class="icons">
-    <img :src="nodeLogo" alt="" class="icons node">
-    <img :src="mdbLogo" alt="" class="icons">
-    <img :src="expressLogo" alt="" class="icons">
-    <img :src="dockerLogo" alt="" class="icons">
-    <img :src="htmlLogo" alt="" class="icons">
-    <img :src="cssLogo" alt="" class="icons">
-    <img :src="sqlLogo" alt="" class="icons node">
-    <img :src="nosqlLogo" alt="" class="icons">
-    <img :src="cuLogo" alt="" class="icons">
-    <img :src="trelloIcon" alt="" class="icons">
-    <img :src="pythonIcon" alt="" class="icons">
-    <img :src="djangoIcon" alt="" class="icons">
-    <img :src="gitIcon" alt="" class="icons">
-    <img :src="githubLogo" alt="" class="icons">
-    <img :src="awsLogo" alt="" class="icons">
-    <img :src="postLogo" alt="" class="icons">
-    <img :src="vueLogo" alt="" class="icons">
-    <img :src="reactLogo" alt="" class="icons">
-    <img :src="handlebarsLogo" alt="" class="icons">
+      <div>
+        <h2>Languages</h2>
+      
+        <img :src="tsLogo" alt="" class="icons">
+        <img :src="jsLogo" alt="" class="icons">
+        <img :src="htmlLogo" alt="" class="icons">
+        <img :src="cssLogo" alt="" class="icons">
+        <img :src="gitIcon" alt="" class="icons">
+        <img :src="pythonIcon" alt="" class="icons">
+
+      </div>
+      <div>
+        <h2>Servers</h2>
+        <img :src="nodeLogo" alt="" class="icons node">
+        <img :src="expressLogo" alt="" class="icons">
+        <img :src="djangoIcon" alt="" class="icons">
+
+      </div>
+      <div>
+        <h2>Libraries/Frameworks</h2>
+        <img :src="vueLogo" alt="" class="icons">
+        <img :src="reactLogo" alt="" class="icons">
+        <img :src="tailwindLogo" alt="" class="icons">
+        <img :src="vuetifyLogo" alt="" class="icons">
+        <img :src="chakraLogo" alt="" class="icons">
+        <img :src="muiLogo" alt="" class="icons">
+
+      </div>
+      <div>
+        <h2>Databases</h2>
+        <img :src="mdbLogo" alt="" class="icons">
+        <img :src="postLogo" alt="" class="icons">
+  
+
+      </div>
+      <div>
+        <h2>Devops</h2>
+        <img :src="dockerLogo" alt="" class="icons">
+        <img :src="awsLogo" alt="" class="icons">
+      </div>
+      <div>
+        <h2>Agile Methodologies</h2>
+        <img :src="cuLogo" alt="" class="icons">
+        <img :src="trelloIcon" alt="" class="icons">
+        <img :src="githubLogo" alt="" class="icons">
+
+      </div>
+      <div>
+        <h2>Other</h2>
+        <img :src="sqlLogo" alt="" class="icons node">
+        <img :src="nosqlLogo" alt="" class="icons">
+        <img :src="handlebarsLogo" alt="" class="icons">
+
+      </div>
+   
+
+   
+
+  
+
+
+
+    
+  
+
 
 
 
 
 
     <div class="css-libraries">
-      <img :src="vuetifyLogo" alt="" class="icons">
-      <img :src="chakraLogo" alt="" class="icons">
-      <img :src="muiLogo" alt="" class="icons">
-      <img :src="tailwindLogo" alt="" class="icons">
+    
 
 
 
