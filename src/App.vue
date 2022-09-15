@@ -42,7 +42,7 @@ const navLinks = reactive<Links>({
       <nav>
         <div class="links-container">
         <div class="link" v-for="links in navLinks" :key="links.name">
-          <a :href="links.path" class="link" target="_blank">{{ links.name }}</a>
+          <a :href="links.path" class="target" target="_blank">{{ links.name }}</a>
       </div>
     </div>
       </nav>
@@ -53,14 +53,26 @@ const navLinks = reactive<Links>({
 
 <style scoped>
 
+  .target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+  }
+
   .link {
-    padding: 0 2.2rem 1rem;
+    padding: 1rem 7.1rem 1rem;
     background: rgb(76, 108, 80);
     font-weight: bolder;
-    color: white;
-    text-decoration: underline;
-    transform: skewY(-5deg);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+
+
+  .link:hover {
+    
+    background: rgb(187, 232, 9);
+    text-decoration: none;
   }
   .links-container {
     display: flex;

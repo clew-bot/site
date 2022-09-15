@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import WelcomeCard from '@/components/WelcomeCard.vue'
-import ProjectCard from '@/components/ProjectCard.vue'
+import ProjectCard from '@/components/Technologies.vue'
 
 </script>
 
