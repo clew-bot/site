@@ -27,18 +27,7 @@ const themeStore = useThemeStore();
 <style scoped>
 
 
-  .blueblock {
-    height: 100px;
-    background: blue;
-    transition: all 0.3s ease-in-out;
 
-  }
-  .greenblock {
-    height: 100px;
-    background: green;
-    transition: all 0.3s ease-in-out;
-
-  }
   .bodys {
     padding-left: 280px !important;
   }

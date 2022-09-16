@@ -1,30 +1,30 @@
 <script setup lang="ts">
-    import tsLogo from "@/assets/tsLogo.png";
-    import jsLogo from "@/assets/jsLogo.png";
-    import nodeLogo from "@/assets/nodeLogo.svg.png";
-    import mdbLogo from "@/assets/mdbLogo.webp";
-    import expressLogo from "@/assets/expressLogo.png";
-    import dockerLogo from "@/assets/dockerLogo.webp";
-    import htmlLogo from "@/assets/htmlLogo.webp";
-    import cssLogo from "@/assets/cssLogo.png";
-    import sqlLogo from "@/assets/sqlLogo.png";
-    import nosqlLogo from "@/assets/nosqlLogo.png";
-    import cuLogo from "@/assets/cuLogo.png";
-    import trelloIcon from "@/assets/trelloIcon.png";
-    import pythonIcon from "@/assets/pythonIcon.webp";
-    import djangoIcon from "@/assets/djangoIcon.png";
-    import gitIcon from "@/assets/gitIcon.png";
-    import githubLogo from "@/assets/githubLogo.png";
-    import awsLogo from "@/assets/awsLogo.png";
-    import postLogo from "@/assets/postLogo.png";
-    import vueLogo from "@/assets/vueLogo.png";
-    import reactLogo from "@/assets/reactLogo.png";
-    import handlebarsLogo from "@/assets/handlebarsLogo.webp";
+    import tsLogo from "@/assets/logos/tsLogo.png";
+    import jsLogo from "@/assets/logos/jsLogo.png";
+    import nodeLogo from "@/assets/logos/nodeLogo.svg.png";
+    import mdbLogo from "@/assets/logos/mdbLogo.webp";
+    import expressLogo from "@/assets/logos/expressLogo.png";
+    import dockerLogo from "@/assets/logos/dockerLogo.webp";
+    import htmlLogo from "@/assets/logos/htmlLogo.webp";
+    import cssLogo from "@/assets/logos/cssLogo.png";
+    import sqlLogo from "@/assets/logos/sqlLogo.png";
+    import nosqlLogo from "@/assets/logos/nosqlLogo.png";
+    import cuLogo from "@/assets/logos/cuLogo.png";
+    import trelloIcon from "@/assets/logos/trelloIcon.png";
+    import pythonIcon from "@/assets/logos/pythonIcon.webp";
+    import djangoIcon from "@/assets/logos/djangoIcon.png";
+    import gitIcon from "@/assets/logos/gitIcon.png";
+    import githubLogo from "@/assets/logos/githubLogo.png";
+    import awsLogo from "@/assets/logos/awsLogo.png";
+    import postLogo from "@/assets/logos/postLogo.png";
+    import vueLogo from "@/assets/logos/vueLogo.png";
+    import reactLogo from "@/assets/logos/reactLogo.png";
+    import handlebarsLogo from "@/assets/logos/handlebarsLogo.webp";
 
-    import vuetifyLogo from "@/assets/vuetifyLogo.png";
-    import chakraLogo from "@/assets/chakraLogo.png";
-    import muiLogo from "@/assets/muiLogo.png";
-    import tailwindLogo from "@/assets/tailwindLogo.png";
+    import vuetifyLogo from "@/assets/logos/vuetifyLogo.png";
+    import chakraLogo from "@/assets/logos/chakraLogo.png";
+    import muiLogo from "@/assets/logos/muiLogo.png";
+    import tailwindLogo from "@/assets/logos/tailwindLogo.png";
     </script>
 <template>
   <section class="section">

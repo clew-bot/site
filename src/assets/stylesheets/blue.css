@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #4e647b;
+}
+
 #app {
 
     margin: 0 auto;
@@ -8,17 +12,28 @@
 
   .blueblock {
     height: 100px;
-    background: blue;
+    background: var(--blue-color);
     transition: all 0.3s ease-in-out;
   }
 
   .bluehiIm {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bolder;
     text-align: left;
     padding: 1rem;
-    color: rgb(52, 59, 187);
+    color: var(--blue-color);
     transition: all 0.3s ease-in-out;
+    transform: scaleY(1.8);
+}
+.blueheadline {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  text-align: left;
+  letter-spacing: -1px;
+  padding: 1rem;
+  color: var(--blue-color);
+  transition: all 0.3s ease-in-out;
+  /* text-decoration: underline; */
 }
 
 .bluewrapper {
@@ -26,7 +41,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background: blue;
+    background: var(--blue-color);
     display: flex;
     align-items: center;
     justify-content: space-between;

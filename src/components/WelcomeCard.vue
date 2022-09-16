@@ -3,7 +3,11 @@
     import { defineStore } from 'pinia';
     import { useCounterStore, useThemeStore } from "../stores/themeStore";
 
-    import Macbook from '@/assets/macbook.jpg'
+    import Macbook from '@/assets/logos/macbook.jpg'
+    import Green from "@/assets/images/green.jpg";
+    import Blue from "@/assets/images/blue.jpg";
+    import Red from "@/assets/images/red.jpg";
+
 
     interface Description {
         title: string;
@@ -14,7 +18,7 @@
 
     }
     const descriptor = reactive<Description>({
-        title: 'Hi I\'m Chad! 👋',
+        title: 'Chad Lew',
         headline: "Full Stack Engineer",
         descriptionOne: 'I\'m a Full Stack Software Engineer by trade in Southern California.',
         descriptionTwo: 'I enjoy coding, playing disc golf, and spending time with my family',
@@ -42,8 +46,12 @@
   <section>
     <div class="hello-wrapper">
         <div class="leftSide">
+          <div class="headlineBox">
             <h1 :class="themeStore.theme+'hiIm'">{{descriptor.title}}</h1>
+          </div>
+          <div class="headlineBox2">
             <h3 :class="themeStore.theme+'headline'">{{descriptor.headline}}</h3>
+            </div>
             <div class="description">
                 <h3>{{descriptor.descriptionOne}}</h3>
                 <h3>{{descriptor.descriptionTwo}}</h3>
@@ -58,14 +66,24 @@
         >
       </div>
       <select name="Colors" id="colors" v-model="selected">
-        <option  value="">Default</option>
+        <option value="" selected disabled>Choose a Theme</option>
+        <option  value="default">Default</option>
           <option value="red">Red</option>
           <option value="blue">Blue</option>
           <option value="green">Green</option>
         </select>
         </div>
-        <div class="rightSide">
+        <div class="rightSide" v-if="themeStore.theme ==='default'">
             <img class="macbook" :src="Macbook" alt="Macbook" />
+        </div>
+        <div v-else-if="themeStore.theme === 'red'">
+            <img class="macbook" :src="Red" alt="Macbook" />
+        </div>
+        <div v-else-if="themeStore.theme === 'blue'">
+            <img class="macbook" :src="Blue" alt="Macbook" />
+        </div>
+        <div v-else-if="themeStore.theme === 'green'">
+            <img class="macbook" :src="Green" alt="Macbook" />
         </div>
  
     </div>
@@ -76,6 +94,30 @@
 
 
 <style>
+
+.headlineBox {
+    background: rgb(18, 18, 18);
+    width: fit-content;
+    text-transform: uppercase;
+    /* transform: rotate(-6deg); */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+}
+.headlineBox2 {
+    background: rgb(18, 18, 18);;
+    width: fit-content;
+    text-transform: uppercase;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    /* transform: rotate(-6deg); */
+}
+
 .say-something {
   border-radius: 10px;
   font-size: 16px;
@@ -112,44 +154,38 @@
 }
     .isCLicked {
   transition: all 0.3s ease-in-out;
-
   animation: clickDownAndUp 0.3s ease-in-out;
 }
 
-.rightSide {
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .macbook {
-    height: 30rem;
+    height: 34vw;
+    width: 28vw;
     border-radius: 5px;
+    transition: 0.3 all ease-in-out;
+    animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 .hello-wrapper {
-    padding-top: 20rem;
+    padding-top: 13rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 5px;
-
-
+    padding-bottom: 15rem;
 }
 
 .description {
     padding: 20px 16px 80px 16px;
-    color: black;
-
-}
-
-
-
-.greenhiIm {
-    font-size: 5rem;
-    font-weight: bolder;
-    text-align: left;
-    padding: 1rem;
-    color: rgb(25, 138, 42);
-    transition: all 0.3s ease-in-out;
+    color: white;
 }
 
 @keyframes clickDownAndUp {

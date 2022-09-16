@@ -13,7 +13,7 @@ export const useCounterStore = defineStore('counter', () => {
 })
 
 export const useThemeStore = defineStore('theme', () => {
-  const theme = ref('red')
+  const theme = ref('default')
   const isDark = computed(() => theme.value === '')
 
   const toggleTheme = (color:string):void => {
