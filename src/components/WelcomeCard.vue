@@ -68,12 +68,11 @@
     </div>
   
   </section>
-  <hr/>
+
 </template>
 
 
 <style>
-
 .say-something {
   border-radius: 10px;
   font-size: 16px;
@@ -124,12 +123,12 @@
 }
 
 .hello-wrapper {
-    margin-top: 5rem;
-    /* max-width: 20rem; */
+    padding-top: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
+
 
 }
 
