@@ -2,6 +2,7 @@
 
 <script setup lang="ts">
 import { reactive, watch, ref, computed } from 'vue';
+import { useThemeStore } from '@/stores/themeStore';
 
 type LinkDefinition = {
   name: string;
@@ -34,11 +35,11 @@ const navLinks = reactive<Links>({
   }
 });
 
-
+const themeStore = useThemeStore();
 </script>
 <template>
 
-    <header class="wrapper">
+    <header :class="themeStore.theme+'wrapper'">
         <nav>
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
@@ -80,7 +81,8 @@ const navLinks = reactive<Links>({
     flex-direction: column;
 
   }
-.wrapper {
+
+.greenwrapper {
   position: fixed;
     top: 0;
     left: 0;
@@ -94,7 +96,23 @@ const navLinks = reactive<Links>({
     padding: 8rem 2rem;
     width: 14rem;
     text-align: center;
-
+    transition: all 0.3s ease-in-out;
+}
+.bluewrapper {
+  position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+    width: 14rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

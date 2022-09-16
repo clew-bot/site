@@ -5,8 +5,8 @@ import App from './App.vue'
 import router from './router'
 
 
-// import "./assets/stylesheets/red.css"
-// import "./assets/stylesheets/orange.css"
+import "./assets/stylesheets/red.css"
+import "./assets/stylesheets/blue.css"
 // import "./assets/stylesheets/green.css"
 
 

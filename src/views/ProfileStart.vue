@@ -3,7 +3,7 @@ import WelcomeCard from '@/components/WelcomeCard.vue'
 import ProjectCard from '@/components/Technologies.vue'
 import SideBar from '@/components/SideBar.vue'
 
-import { useThemeStore } from '@/stores/counter'
+import { useThemeStore } from '@/stores/themeStore'
 
 const themeStore = useThemeStore();
 
@@ -26,12 +26,7 @@ const themeStore = useThemeStore();
 
 <style scoped>
 
-  .redblock {
-    height: 100px;
-    background: red;
-    transition: all 0.3s ease-in-out;
-    
-  }
+
   .blueblock {
     height: 100px;
     background: blue;

@@ -28,8 +28,8 @@
     </script>
 <template>
   <section class="section">
-    <h1>Experience</h1>
-    <p>I've worked with a handful of amazing technologies over the years. </p>
+    <h1 class="experience">Experience</h1>
+    <h3 class="descriptions"><i>I've worked with a handful of amazing technologies over the years.</i></h3>
     <div class="icon-container">
       <div class="col">
         <h2>Languages</h2>
@@ -92,6 +92,21 @@
 
 
 <style>
+
+  .descriptions {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgb(227, 226, 226);
+  }
+
+  .experience {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(227, 226, 226);
+  }
+
   .col > h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;

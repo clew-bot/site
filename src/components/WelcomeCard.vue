@@ -1,12 +1,13 @@
 <script setup lang="ts" >
     import { reactive, ref, computed, watch, defineProps } from 'vue';
     import { defineStore } from 'pinia';
-    import { useCounterStore, useThemeStore } from "../stores/counter";
+    import { useCounterStore, useThemeStore } from "../stores/themeStore";
 
     import Macbook from '@/assets/macbook.jpg'
 
     interface Description {
         title: string;
+        headline: string | null;
         descriptionOne: string | null;
         descriptionTwo: string | null;
         descriptionThree: string | null;
@@ -14,6 +15,7 @@
     }
     const descriptor = reactive<Description>({
         title: 'Hi I\'m Chad! 👋',
+        headline: "Full Stack Engineer",
         descriptionOne: 'I\'m a Full Stack Software Engineer by trade in Southern California.',
         descriptionTwo: 'I enjoy coding, playing disc golf, and spending time with my family',
         descriptionThree: 'Here\'s a brief tour of what I\'ve been working on.'
@@ -41,6 +43,7 @@
     <div class="hello-wrapper">
         <div class="leftSide">
             <h1 :class="themeStore.theme+'hiIm'">{{descriptor.title}}</h1>
+            <h3 :class="themeStore.theme+'headline'">{{descriptor.headline}}</h3>
             <div class="description">
                 <h3>{{descriptor.descriptionOne}}</h3>
                 <h3>{{descriptor.descriptionTwo}}</h3>
@@ -138,22 +141,8 @@
 
 }
 
-.redhiIm {
-    font-size: 5rem;
-    font-weight: bolder;
-    text-align: left;
-    padding: 1rem;
-    color: rgb(196, 68, 68);
-    transition: all 0.3s ease-in-out;
-}
-.bluehiIm {
-    font-size: 5rem;
-    font-weight: bolder;
-    text-align: left;
-    padding: 1rem;
-    color: rgb(52, 59, 187);
-    transition: all 0.3s ease-in-out;
-}
+
+
 .greenhiIm {
     font-size: 5rem;
     font-weight: bolder;

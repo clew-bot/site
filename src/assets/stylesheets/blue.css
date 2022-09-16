@@ -1,0 +1,39 @@
+#app {
+
+    margin: 0 auto;
+    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+
+  .blueblock {
+    height: 100px;
+    background: blue;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .bluehiIm {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: left;
+    padding: 1rem;
+    color: rgb(52, 59, 187);
+    transition: all 0.3s ease-in-out;
+}
+
+.bluewrapper {
+  position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+    width: 14rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}

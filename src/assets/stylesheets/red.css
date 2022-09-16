@@ -1,8 +1,54 @@
+:root {
+--main-color: #c2324a;
+}
 #app {
-    max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
     background: rgb(202, 23, 23);
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
   }
+
+  .redblock {
+    height: 100px;
+    background: var(--main-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .redheadline {
+    font-size: 2.3rem;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: -4rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+    color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+  }
+
+  .redwrapper {
+    position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: var(--main-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      flex-flow: column;
+      padding: 8rem 2rem;
+      width: 14rem;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .redhiIm {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: left;
+    padding: 1rem;
+    color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+    
+}
