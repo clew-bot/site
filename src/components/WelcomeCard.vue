@@ -94,6 +94,19 @@
 
 
 <style>
+  
+  select {
+    appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  }
 
 .headlineBox {
     background: rgb(18, 18, 18);
@@ -110,7 +123,7 @@
     background: rgb(18, 18, 18);;
     width: fit-content;
     text-transform: uppercase;
-    border-bottom-left-radius: 5px;
+
     border-bottom-right-radius: 5px;
     box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
@@ -184,8 +197,16 @@
 }
 
 .description {
-    padding: 20px 16px 80px 16px;
+    padding: 20px 16px 20px 16px;
     color: white;
+    background: rgb(18, 18, 18);
+    height: fit-content;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
 }
 
 @keyframes clickDownAndUp {
