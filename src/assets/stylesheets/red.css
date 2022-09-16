@@ -1,0 +1,8 @@
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgb(202, 23, 23);
+    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+  }

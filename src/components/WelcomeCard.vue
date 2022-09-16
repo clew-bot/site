@@ -1,5 +1,5 @@
 <script setup lang="ts" >
-    import { reactive, ref, computed, watch } from 'vue';
+    import { reactive, ref, computed, watch, defineProps } from 'vue';
     import { defineStore } from 'pinia';
     import { useCounterStore, useThemeStore } from "../stores/counter";
 
@@ -40,7 +40,7 @@
   <section>
     <div class="hello-wrapper">
         <div class="leftSide">
-            <h1 class="hiIm">{{descriptor.title}}</h1>
+            <h1 :class="themeStore.theme+'hiIm'">{{descriptor.title}}</h1>
             <div class="description">
                 <h3>{{descriptor.descriptionOne}}</h3>
                 <h3>{{descriptor.descriptionTwo}}</h3>
@@ -54,9 +54,8 @@
           ><i>Resume</i></button
         >
       </div>
-      <p>{{selected}}</p>
       <select name="Colors" id="colors" v-model="selected">
-        <option disabled value="">Please select one</option>
+        <option  value="">Default</option>
           <option value="red">Red</option>
           <option value="blue">Blue</option>
           <option value="green">Green</option>
@@ -140,12 +139,29 @@
 
 }
 
-.hiIm {
+.redhiIm {
     font-size: 5rem;
     font-weight: bolder;
     text-align: left;
     padding: 1rem;
-    color: black;
+    color: rgb(196, 68, 68);
+    transition: all 0.3s ease-in-out;
+}
+.bluehiIm {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: left;
+    padding: 1rem;
+    color: rgb(52, 59, 187);
+    transition: all 0.3s ease-in-out;
+}
+.greenhiIm {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: left;
+    padding: 1rem;
+    color: rgb(25, 138, 42);
+    transition: all 0.3s ease-in-out;
 }
 
 @keyframes clickDownAndUp {

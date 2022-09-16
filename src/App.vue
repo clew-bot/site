@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useThemeStore} from '@/stores/counter'
 
-import { reactive } from 'vue';
+import { reactive, watch, ref, computed } from 'vue';
 
 type LinkDefinition = {
   name: string;
@@ -34,6 +35,14 @@ const navLinks = reactive<Links>({
   }
 });
 
+
+const themeStore = useThemeStore();
+
+const selectedTheme = ref(themeStore.theme);
+
+
+
+
 </script>
 
 <template>
@@ -46,9 +55,10 @@ const navLinks = reactive<Links>({
       </div>
     </div>
       </nav>
+      <button>testing {{selectedTheme}}</button>
     </div>
   </header>
-  <RouterView />
+  <RouterView theme="themeStore.theme"/>
 </template>
 
 <style scoped>

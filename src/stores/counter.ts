@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref, computed, reactive } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', () => {
@@ -13,8 +13,8 @@ export const useCounterStore = defineStore('counter', () => {
 })
 
 export const useThemeStore = defineStore('theme', () => {
-  const theme = ref('dark')
-  const isDark = computed(() => theme.value === 'dark')
+  const theme = ref('red')
+  const isDark = computed(() => theme.value === '')
 
   const toggleTheme = (color:string):void => {
       theme.value = color;
