@@ -1,89 +1,88 @@
 <script setup lang="ts">
-    import tsLogo from "@/assets/logos/tsLogo.png";
-    import jsLogo from "@/assets/logos/jsLogo.png";
-    import nodeLogo from "@/assets/logos/nodeLogo.svg.png";
-    import mdbLogo from "@/assets/logos/mdbLogo.webp";
-    import expressLogo from "@/assets/logos/expressLogo.png";
-    import dockerLogo from "@/assets/logos/dockerLogo.webp";
-    import htmlLogo from "@/assets/logos/htmlLogo.webp";
-    import cssLogo from "@/assets/logos/cssLogo.png";
-    import sqlLogo from "@/assets/logos/sqlLogo.png";
-    import nosqlLogo from "@/assets/logos/nosqlLogo.png";
-    import cuLogo from "@/assets/logos/cuLogo.png";
-    import trelloIcon from "@/assets/logos/trelloIcon.png";
-    import pythonIcon from "@/assets/logos/pythonIcon.webp";
-    import djangoIcon from "@/assets/logos/djangoIcon.png";
-    import gitIcon from "@/assets/logos/gitIcon.png";
-    import githubLogo from "@/assets/logos/githubLogo.png";
-    import awsLogo from "@/assets/logos/awsLogo.png";
-    import postLogo from "@/assets/logos/postLogo.png";
-    import vueLogo from "@/assets/logos/vueLogo.png";
-    import reactLogo from "@/assets/logos/reactLogo.png";
-    import handlebarsLogo from "@/assets/logos/handlebarsLogo.webp";
 
-    import vuetifyLogo from "@/assets/logos/vuetifyLogo.png";
-    import chakraLogo from "@/assets/logos/chakraLogo.png";
-    import muiLogo from "@/assets/logos/muiLogo.png";
-    import tailwindLogo from "@/assets/logos/tailwindLogo.png";
     </script>
 <template>
   <section class="section">
+    <div class="title-bg">
     <h1 class="experience">Experience</h1>
+  </div>
+  <div class="desc-bg">
     <h3 class="descriptions"><i>I've worked with a handful of amazing technologies over the years.</i></h3>
+  </div>
     <div class="icon-container">
       <div class="col">
         <h2>Languages</h2>
-      
-        <img :src="tsLogo" alt="" class="icons">
-        <img :src="jsLogo" alt="" class="icons">
-        <img :src="htmlLogo" alt="" class="icons">
-        <img :src="cssLogo" alt="" class="icons">
-        <img :src="gitIcon" alt="" class="icons">
-        <img :src="pythonIcon" alt="" class="icons">
+        <div class="list-container">
+        <p><span class="check">✔</span> Typescript</p>
+        <p><span class="check">✔</span> Javascript</p>
+        <p><span class="check">✔</span> HTML</p>
+        <p><span class="check">✔</span> CSS</p>
+        <p><span class="check">✔</span> Git</p>
+        <p><span class="check">✔</span> Python</p>
+      </div>
 
       </div>
       <div class="col">
         <h2>Servers</h2>
-        <img :src="nodeLogo" alt="" class="icons node">
+      <div class="list-container">
+        <p><span class="check">✔</span> NodeJS</p>
+        <p><span class="check">✔</span> ExpressJS</p>
+        <p><span class="check">✔</span> Django</p>
+      </div>
+        <!-- <img :src="nodeLogo" alt="" class="icons node">
         <img :src="expressLogo" alt="" class="icons">
-        <img :src="djangoIcon" alt="" class="icons">
-
+        <img :src="djangoIcon" alt="" class="icons"> -->
       </div>
       <div class="col">
         <h2>Libraries/Frameworks</h2>
-        <img :src="vueLogo" alt="" class="icons">
-        <img :src="reactLogo" alt="" class="icons">
-        <img :src="tailwindLogo" alt="" class="icons">
-        <img :src="vuetifyLogo" alt="" class="icons">
-        <img :src="chakraLogo" alt="" class="icons">
-        <img :src="muiLogo" alt="" class="icons">
+        <div class="list-container">
+        <p><span class="check">✔</span> Vue</p>
+        <p><span class="check">✔</span> React</p>
+        <p><span class="check">✔</span> Handlebars</p>
+        <p><span class="check">✔</span> Tailwind</p>
+        <p><span class="check">✔</span> Vuetify</p>
+        <p><span class="check">✔</span> Chakra</p>
+        <p><span class="check">✔</span> MaterialUI</p>
+      </div>
 
       </div>
       <div class="col">
         <h2>Databases</h2>
-        <img :src="mdbLogo" alt="" class="icons">
-        <img :src="postLogo" alt="" class="icons">
-  
-
+        <div class="list-container">
+        <p><span class="check">✔</span> SQL</p>
+        <p><span class="check">✔</span> MongoDB</p>
+        <p><span class="check">✔</span> Mongoose</p>
+        <p><span class="check">✔</span> PostgreSQL</p>
+      </div>
       </div>
       <div class="col">
         <h2>Devops</h2>
-        <img :src="dockerLogo" alt="" class="icons">
-        <img :src="awsLogo" alt="" class="icons">
+        <div class="list-container">
+        <p><span class="check">✔</span> Docker</p>
+        <p><span class="check">✔</span> AWS</p>
+        <p><span class="check">✔</span> PostgreSQL</p>
+      </div>
       </div>
       <div class="col">
         <h2>Agile Methodologies</h2>
-        <img :src="cuLogo" alt="" class="icons">
-        <img :src="trelloIcon" alt="" class="icons">
-        <img :src="githubLogo" alt="" class="icons">
+        <div class="list-container">
+        <p><span class="check">✔</span> ClickUp</p>
+        <p><span class="check">✔</span> Slack</p>
+        <p><span class="check">✔</span> Trello</p>
+        <p><span class="check">✔</span> Github</p>
+      </div>
 
       </div>
-      <div class="col">
-        <h2>Other</h2>
-        <img :src="sqlLogo" alt="" class="icons node">
-        <img :src="nosqlLogo" alt="" class="icons">
-        <img :src="handlebarsLogo" alt="" class="icons">
 
+    </div>
+    <div class="exp-container">
+      <div class="years-bg">
+      <h2><i>2+</i></h2>
+      <h2><i>Years of Experience</i></h2>
+      </div>
+      <div class="years-bg">
+        <h2><i>50+</i></h2>
+        <h2><i>Projects Completed</i></h2>
       </div>
     </div>
   </section>
@@ -93,33 +92,96 @@
 
 <style>
 
+  .exp-container {
+    display: flex;
+    justify-content:flex-start;
+    width: fit-content;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 5rem;
+  }
+
+  .years-bg {
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 1rem;
+ 
+  }
+
+  .years-bg > h2 > i {
+    font-weight: 600;
+  }
+
+  .check {
+    color: #00b894;
+  }
+
+  .list-container {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+  }
+
+   .desc-bg {
+    background: #f5f5f5;
+    width: fit-content;
+    border-radius: 5px;
+    margin-top: 3rem !important;
+    padding: 10px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+   }
+
+  .title-bg {
+    background: #f5f5f5;
+    width: fit-content;
+    padding: 0 10px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    transform: skewY(-5deg);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
+
   .descriptions {
     text-align: left;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: rgb(227, 226, 226);
+    color: rgb(23, 23, 23);
+  }
+
+  .descriptions > i {
+    font-weight: 700 !important;
   }
 
   .experience {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: rgb(227, 226, 226);
+    color: rgb(23, 23, 23);
+
   }
 
   .col > h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin-bottom: 1rem;
-    background: #f5f5f5;
+    color: #f5f5f5;
+    font-weight: 800;
   }
 
   .icon-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 1200px;
+
+    margin-top: 7rem;
   }
 
   .col {

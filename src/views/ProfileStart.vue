@@ -20,7 +20,7 @@ const themeStore = useThemeStore();
   <div class="bodys">
     <ProjectCard />
     </div>
-
+    <div :class="themeStore.theme+'block'"></div>
   </main>
 </template>
 

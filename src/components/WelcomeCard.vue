@@ -8,6 +8,8 @@
     import Blue from "@/assets/images/blue.jpg";
     import Red from "@/assets/images/red.jpg";
 
+    import vSelect from 'vue-select'
+
 
     interface Description {
         title: string;
@@ -33,11 +35,17 @@
     const themeStore = useThemeStore();
 
     const selected = ref("");
-    watch(selected, (val) => {
+    watch(selected, (val: any) => {
         console.log("Watching! ", val)
-        themeStore.toggleTheme(val);
+        themeStore.toggleTheme(val.value);
     });
 
+    const options = [
+        { value: 'default', label: 'Default' },
+        { value: 'green', label: 'Green' },
+        { value: 'blue', label: 'Blue' },
+        { value: 'red', label: 'Red' },
+    ]
 
 
 </script>
@@ -65,13 +73,11 @@
           ><i>Resume</i></button
         >
       </div>
-      <select name="Colors" id="colors" v-model="selected">
-        <option value="" selected disabled>Choose a Theme</option>
-        <option  value="default">Default</option>
-          <option value="red">Red</option>
-          <option value="blue">Blue</option>
-          <option value="green">Green</option>
-        </select>
+<div style="width: 20rem;">
+      <v-select placeholder="Theme" class="style-chooser" :options="options" name="Colors" id="colors" v-model="selected">
+
+        </v-select>
+      </div>
         </div>
         <div class="rightSide" v-if="themeStore.theme ==='default'">
             <img class="macbook" :src="Macbook" alt="Macbook" />
@@ -94,19 +100,28 @@
 
 
 <style>
-  
-  select {
-    appearance: none;
-  background-color: transparent;
+
+.style-chooser .vs__search::placeholder,
+.style-chooser .vs__dropdown-toggle,
+.style-chooser .vs__dropdown-menu {
+  background: #9e9fa2;
   border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  }
+  color: #151516;
+  text-transform: lowercase !important;
+  font-variant: small-caps;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.style-chooser .vs__clear,
+.style-chooser .vs__open-indicator {
+  fill: #394066;
+  
+}
+
+
+  
+
 
 .headlineBox {
     background: rgb(18, 18, 18);
