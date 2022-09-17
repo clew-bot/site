@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+
+
     </script>
 <template>
   <section class="section">
@@ -76,13 +78,36 @@
 
     </div>
     <div class="exp-container">
-      <div class="years-bg">
-      <h2><i>2+</i></h2>
-      <h2><i>Years of Experience</i></h2>
+      <div class="flex-cont">
+        <div class="years-bg">
+          <h2><i>2+</i></h2>
+          <h2><i>Years of experience</i></h2>
+        </div>
+        <div class="years-bg">
+          <h2><i>50+</i></h2>
+          <h2><i>Projects completed</i></h2>
+        </div>
       </div>
-      <div class="years-bg">
-        <h2><i>50+</i></h2>
-        <h2><i>Projects Completed</i></h2>
+      
+      <div class="flex-cont">
+        <div class="years-bg">
+          <h2><i>1,000+</i></h2>
+          <h2><i>Commits on Github</i></h2>
+        </div>
+        <div class="years-bg">
+          <h2><i>200+</i></h2>
+          <h2><i>Hours on Udemy</i></h2>
+        </div>
+      </div>
+      <div class="flex-cont">
+        <div class="years-bg">
+          <h2><i>50+</i></h2>
+          <h2><i>Leetcode solved</i></h2>
+        </div>
+        <div class="years-bg">
+          <h2><i>Countless</i></h2>
+          <h2><i>Javascript executions</i></h2>
+        </div>
       </div>
     </div>
   </section>
@@ -91,14 +116,26 @@
 
 
 <style>
+  @keyframes flipCard {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
 
   .exp-container {
     display: flex;
-    justify-content:flex-start;
-    width: fit-content;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    /* width: fit-content; */
     margin-top: 50px;
     margin-bottom: 5rem;
+
   }
 
   .years-bg {
@@ -109,7 +146,8 @@
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     margin-bottom: 1rem;
- 
+    margin-right: 1rem;
+    /* animation: flipCard 2s ease-in-out; */
   }
 
   .years-bg > h2 > i {
@@ -148,6 +186,8 @@
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
   }
+
+  
 
   .descriptions {
     text-align: left;
