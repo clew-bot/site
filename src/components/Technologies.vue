@@ -31,9 +31,6 @@
         <p><span class="check">✔</span> ExpressJS</p>
         <p><span class="check">✔</span> Django</p>
       </div>
-        <!-- <img :src="nodeLogo" alt="" class="icons node">
-        <img :src="expressLogo" alt="" class="icons">
-        <img :src="djangoIcon" alt="" class="icons"> -->
       </div>
       <div class="col">
         <h2>Libraries/Frameworks</h2>
@@ -164,48 +161,11 @@
     color: #f5f5f5;
   }
 
-   .desc-bg {
-    background: #f5f5f5;
-    width: fit-content;
-    border-radius: 5px;
-    margin-top: 3rem !important;
-    padding: 10px;
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-   }
-
-  .title-bg {
-    background: #f5f5f5;
-    width: fit-content;
-    padding: 0 10px;
-    margin-top: 3rem;
-    border-radius: 5px;
-    transform: skewY(-5deg);
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-  }
-
-  
-
-  .descriptions {
-    text-align: left;
-    font-size: 1.5rem;
-    color: rgb(23, 23, 23);
-  }
-
   .descriptions > i {
     font-weight: 700 !important;
   }
 
-  .experience {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: rgb(23, 23, 23);
 
-  }
 
   .col > h2 {
     font-size: 1.9rem;

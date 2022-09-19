@@ -209,6 +209,7 @@
     align-items: center;
     border-radius: 5px;
     padding-bottom: 15rem;
+    flex-wrap: wrap;
 }
 
 .description {

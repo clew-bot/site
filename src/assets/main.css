@@ -2,9 +2,7 @@
 
 
 #app {
-
   margin: 0 auto;
-  /* padding: 2rem; */
   background: rgb(34, 34, 34);
   font-weight: normal;
   font-family: 'Ubuntu', sans-serif;
@@ -17,6 +15,45 @@ a,
   transition: 0.4s;
 }
 
+/* Experience Page - START */
+.experience {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: rgb(23, 23, 23);
+}
+
+.title-bg {
+  background: #f5f5f5;
+  width: fit-content;
+  padding: 0 10px;
+  margin-top: 3rem;
+  border-radius: 5px;
+  transform: skewY(-5deg);
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+.desc-bg {
+  background: #f5f5f5;
+  width: fit-content;
+  border-radius: 5px;
+  margin-top: 3rem !important;
+  padding: 10px;
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+ }
+
+ .descriptions {
+  text-align: left;
+  font-size: 1.5rem;
+  color: rgb(23, 23, 23);
+}
+
+
+/* Experience Page - END */
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
