@@ -43,7 +43,7 @@ const themeStore = useThemeStore();
         <nav>
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
-            <a :href="links.path" class="target" target="_blank">{{ links.name }}</a>
+            <a :href="links.path" class="target"><p>{{ links.name }}</p></a>
         </div>
       </div>
         </nav>
@@ -52,38 +52,41 @@ const themeStore = useThemeStore();
   </template>
 <style>
 
+  nav {
+    letter-spacing: 2px;
+    display: flex;
+    margin-top: 2.5rem !important;
+  }
+
 
 
  .target {
+
     display: flex;
-    justify-content: center;
     align-items: center;
     color: white;
- 
+    font-weight: bolder;
 
   }
 
   .link {
-
     font-size: 2rem;
     font-weight: bolder;
   }
 
-
-  .link:hover {
-    
+  .link:hover {    
     background: rgb(91, 92, 87);
     text-decoration: none;
   }
+
   .links-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-
   }
 
 .greenwrapper {
-  position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -98,7 +101,6 @@ const themeStore = useThemeStore();
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
-
 
 @media screen and (max-width: 768px) {
   .links-container  {
