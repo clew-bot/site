@@ -3,6 +3,8 @@ import WelcomeCard from '@/components/WelcomeCard.vue'
 import ProjectCard from '@/components/Technologies.vue'
 import SideBar from '@/components/SideBar.vue'
 import ExpCard from '@/components/ExpCard.vue'
+import Contact from '@/components/Contact.vue'
+
 
 import { useThemeStore } from '@/stores/themeStore'
 
@@ -28,6 +30,12 @@ const themeStore = useThemeStore();
     <ExpCard />
     </div>
     <div :class="themeStore.theme+'block'"></div>
+    <div class="bodys">
+    <Contact />
+    </div>
+    <div :class="themeStore.theme+'block'"></div>
+
+
   </main>
 </template>
 
