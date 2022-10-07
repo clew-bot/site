@@ -11,17 +11,17 @@
 
 
   .blueblock {
-    height: 100px;
+    height: 150px;
     background: var(--blue-color);
     transition: all 0.3s ease-in-out;
   }
 
   .bluehiIm {
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: bolder;
     text-align: left;
     padding: 1rem;
-    color: var(--blue-color);
+    color: var(--white-color);
     transition: all 0.3s ease-in-out;
     transform: scaleY(1.1);
 }
@@ -48,7 +48,7 @@
     z-index: 1000;
     flex-flow: column;
     padding: 8rem 2rem;
-    width: 14rem;
+    width: 15rem;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }

@@ -15,35 +15,50 @@ import visu from "@/assets/proj/visu.png"
       <div class="proj-container">
         <div class="proj-bg">
           <img :src="altitude" alt="word scrambling game" class="proj-image">
-          <h1>altitude</h1>
-          <p>Custom Social Media site I wrote using Vue/Vuex and Express. Uses MongoDB and AWS for storage. Vuetify for theming and custom CSS. Add friends, make your custom profile, find friends, like users and more.</p>
+          <h1 class="proj-title">altitude</h1>
+          <p class="proj-desc">Custom Social Media site I wrote using Vue/Vuex and Express. Uses MongoDB and AWS for storage. Vuetify for theming and custom CSS. Add friends, make your custom profile, find friends, like users and more.</p>
           <p class="made-with">Made with Vue</p>
         </div>
         <div class="proj-bg">
           <img :src="socially" alt="word scrambling game" class="proj-image">
-          <h1>socially</h1>
-          <p>Custom Social Media site using React/Redux Toolkit and Express. Uses MongoDB for storage. Create a profile and talk to users in the global chat!</p>
+          <h1 class="proj-title">socially</h1>
+          <p class="proj-desc">Custom Social Media site using React/Redux Toolkit and Express. Uses MongoDB for storage. Create a profile and talk to users in the global chat!</p>
           <p class="made-with">Made with React</p>
 
         </div>
         <div class="proj-bg">
           <img :src="wordScrambler" alt="word scrambling game" class="proj-image">
-          <h1>word scrambler</h1>
-          <p>Fun word scrambling game users can play up to 10 points. Guess the words in order and try to type it out. Yellow spaces are meant for spaces.</p>
+          <h1 class="proj-title">word scrambler</h1>
+          <p class="proj-desc">Fun word scrambling game users can play up to 10 points. Guess the words in order and try to type it out. Yellow spaces are meant for spaces.</p>
           <p class="made-with">Made with Vue</p>
         </div>
         <div class="proj-bg">
           <img :src="visu" alt="word scrambling game" class="proj-image">
-          <h1>visualizer</h1>
-          <p>Visualize the sound of your music! Input any song and watch your audio move. Made with the AudioContext API and Canvas API.</p>
+          <h1 class="proj-title">visualizer</h1>
+          <p class="proj-desc">Visualize the sound of your music! Input any song and watch your audio move. Made with the AudioContext API and Canvas API.</p>
         </div>
       </div>
-      <div>
-        Want to see more? Check out my Github!
+      <div class="seeMore">
+        Want to see more? Check out my <a target="_blank" href="https://github.com/clew-bot">Github</a>!
       </div>
   </div>
 </template>
 <style>
+
+  .proj-desc {
+
+    font-weight: 400;
+    color: rgb(211, 225, 217);
+
+  }
+
+  .proj-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+    color: rgb(197, 102, 238);
+  }
 
   .proj-image {
     width: 300px;
@@ -67,12 +82,19 @@ import visu from "@/assets/proj/visu.png"
     position: relative;
   }
 
-.proj-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
-  color: rgb(242, 240, 240);
-  margin-top: 4rem;
-}
+  .proj-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    color: rgb(242, 240, 240);
+    margin-top: 4rem;
+  }
+  
+  .seeMore {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    color: rgb(242, 240, 240);
+  }
 </style>

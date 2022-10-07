@@ -53,9 +53,11 @@ const themeStore = useThemeStore();
 <style>
 
   nav {
-    letter-spacing: 2px;
+    letter-spacing: -4px;
     display: flex;
     margin-top: 2.5rem !important;
+    font-family: 'Silkscreen', cursive;
+    
   }
 
 

@@ -2,6 +2,7 @@
     import { reactive, ref, computed, watch, defineProps } from 'vue';
     import { defineStore } from 'pinia';
     import { useCounterStore, useThemeStore } from "../stores/themeStore";
+    import Programmer from '@/components/Programmer.vue'
 
     import Macbook from '@/assets/logos/macbook.jpg'
     import Green from "@/assets/images/green.jpg";
@@ -10,9 +11,9 @@
 
     import vSelect from 'vue-select'
 
-
     interface Description {
         title: string;
+        emoji: string;
         headline: string | null;
         descriptionOne: string | null;
         descriptionTwo: string | null;
@@ -20,7 +21,8 @@
 
     }
     const descriptor = reactive<Description>({
-        title: 'Hi I\'m Chad 👋',
+        title: 'Hi I\'m Chad',
+        emoji: '👋',
         headline: "Full Stack Engineer",
         descriptionOne: 'I\'m a Full Stack Software Engineer by trade in Southern California.',
         descriptionTwo: 'I enjoy coding, playing disc golf, and spending time with my family',
@@ -55,7 +57,7 @@
     <div class="hello-wrapper">
         <div class="leftSide">
           <div class="headlineBox">
-            <h1 :class="themeStore.theme+'hiIm'">{{descriptor.title}}</h1>
+            <h1 :class="themeStore.theme+'hiIm'">{{descriptor.title}} <span class="wavy"> {{descriptor.emoji}}</span></h1>
           </div>
           <div class="headlineBox2">
             <h3 :class="themeStore.theme+'headline'">{{descriptor.headline}}</h3>
@@ -65,33 +67,24 @@
                 <h3>{{descriptor.descriptionTwo}}</h3>
                 <h3>{{descriptor.descriptionThree}}</h3>
             </div>
-            <div class="outer-bg">
+            <!-- <div class="outer-bg">
         <button
           class="say-something"
           @click="clickHandler"
           :class="{ isCLicked: clicked }"
           ><i>Resume</i></button
         >
-      </div>
-<div style="width: 20rem;">
+      </div> -->
+<div style="width: 10rem; padding: 1rem" class="select-container">
       <v-select placeholder="Theme" class="style-chooser" :options="options" name="Colors" id="colors" v-model="selected">
 
         </v-select>
       </div>
         </div>
-        <div class="rightSide" v-if="themeStore.theme ==='default'">
-            <img class="macbook" :src="Macbook" alt="Macbook" />
+        <div class="rightSide">
+            <!-- <img class="macbook" :src="Macbook" alt="Macbook" /> -->
+            <Programmer :theme="themeStore.theme"/>
         </div>
-        <div v-else-if="themeStore.theme === 'red'">
-            <img class="macbook" :src="Red" alt="Macbook" />
-        </div>
-        <div v-else-if="themeStore.theme === 'blue'">
-            <img class="macbook" :src="Blue" alt="Macbook" />
-        </div>
-        <div v-else-if="themeStore.theme === 'green'">
-            <img class="macbook" :src="Green" alt="Macbook" />
-        </div>
- 
     </div>
   
   </section>
@@ -100,6 +93,29 @@
 
 
 <style>
+
+  .wavy {
+  animation-name: wave-animation; 
+  animation-duration: 2.5s;       
+  animation-iteration-count: infinite; 
+  transform-origin: 70% 70%;       
+  display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+  100% { transform: rotate( 0.0deg) }
+}
+
+  .select-container {
+    margin-top: 2rem;
+  }
 
 .style-chooser .vs__search::placeholder,
 .style-chooser .vs__dropdown-toggle,
@@ -124,25 +140,25 @@
 
 
 .headlineBox {
-    background: rgb(18, 18, 18);
+    /* background: rgb(18, 18, 18); */
     width: fit-content;
     text-transform: uppercase;
     /* transform: rotate(-6deg); */
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75); */
 }
 .headlineBox2 {
-    background: rgb(18, 18, 18);;
+    /* background: rgb(18, 18, 18); */
     width: fit-content;
     text-transform: uppercase;
 
     border-bottom-right-radius: 5px;
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75); */
     /* transform: rotate(-6deg); */
 }
 
@@ -215,14 +231,14 @@
 .description {
     padding: 20px 16px 20px 16px;
     color: white;
-    background: rgb(18, 18, 18);
+    /* background: rgb(18, 18, 18); */
     height: fit-content;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75); */
 }
 
 @keyframes clickDownAndUp {

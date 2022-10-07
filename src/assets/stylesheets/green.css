@@ -11,13 +11,13 @@
 
 
   .greenblock {
-    height: 100px;
+    height: 150px;
     background: var(--green-color);
     transition: all 0.3s ease-in-out;
   }
 
   .greenhiIm {
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: bolder;
     text-align: left;
     padding: 1rem;
@@ -48,7 +48,7 @@
     z-index: 1000;
     flex-flow: column;
     padding: 8rem 2rem;
-    width: 14rem;
+    width: 15rem;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }

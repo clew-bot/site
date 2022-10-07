@@ -9,7 +9,7 @@
       }
     
       .defaultblock {
-        height: 100px;
+        height: 150px;
         background: var(--default-color) ;
         transition: all 0.3s ease-in-out;
       }
@@ -26,7 +26,7 @@
       }
     
       .defaultwrapper {
-        position: fixed;
+          position: fixed;
           top: 0;
           left: 0;
           bottom: 0;
@@ -37,14 +37,14 @@
           z-index: 1000;
           flex-flow: column;
           padding: 8rem 2rem;
-          width: 14rem;
+          width: 15rem;
           text-align: center;
           transition: all 0.3s ease-in-out;
     
       }
     
       .defaulthiIm {
-        font-size: 3rem;
+        font-size: 6rem;
         font-weight: bolder;
         text-align: left;
         padding: 1rem;

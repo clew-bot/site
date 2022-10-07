@@ -19,7 +19,7 @@ const themeStore = useThemeStore();
     <div class="bodys">
     <WelcomeCard />
   </div>
-  <div :class="themeStore.theme+'block'"></div>
+  <div :class="themeStore.theme+'block'"><h2 class="quote">“The people who are crazy enough to think they can change the world are the ones who do.” <span><i>-Steve Jobs, CEO Apple</i></span></h2></div>
   <div class="bodys">
     <ProjectCard />
     </div>
@@ -33,7 +33,31 @@ const themeStore = useThemeStore();
 
 <style scoped>
 
+  .quote {
+    z-index: 9 !important;
+    margin-left: 17rem;
+    color: white !important;
+    font-family: 'Silkscreen', cursive;
+    padding-top: 1.1rem;
+    /* font-weight: bolder; */
+    font-size: 1.3rem;
+    font-size: 1.5vw;
+    /* letter-spacing: -4px */
+  }
+
   @media screen and (max-width: 768px) {
+
+    .quote {
+      margin-left: 0px;
+      font-size: 1.4rem;
+      font-size: 2.3vw;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .author {
+      font-size: .7rem;
+    }
     .sidebar {
       display: none;
     }
