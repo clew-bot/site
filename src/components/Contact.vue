@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
+import contact from '@/assets/svgs/contact.jpg';
+import MobilePhone from '@/components/MobilePhone.vue'
 
 const formSubmission = reactive({
   fullName: '',
@@ -30,12 +32,18 @@ console.log(formSubmission);
   <footer>
     <div class="contact-container">
         <h1 class="getIn">Contact</h1>
+      <div class="container">
+        <div class="contactIcon">
+          <MobilePhone class="mobile-phone"/>
+        </div>
         <div class="input-container">
         <input  placeholder="Name" v-model="formSubmission.fullName">
-        <input placeholder="Email" v-model="formSubmission.email">
-        <textarea placeholder="Message" v-model="formSubmission.message"></textarea>
-        <button @click="sendForm">Send</button>
+        <input placeholder="What's your email?" v-model="formSubmission.email">
+        <textarea placeholder="Your message..." v-model="formSubmission.message"></textarea>
+        <button class="send-btn" @click="sendForm">Send</button>
     </div>
+
+  </div>
     </div>
   </footer>
 </template>
@@ -44,21 +52,50 @@ console.log(formSubmission);
 
 <style>
 
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  .send-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .mobile-phone {
+    /* margin: 100px; */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: rgb(46, 46, 46); */
+    border-radius: 5px;
+    width: 100%;
+  }
+
     .contact-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         color: white;
-        /* background: hotpink; */
-        /* padding: 100px; */
-        padding: 20px;
-        /* background: rgb(46, 45, 45); */
+        /* padding: 20px; */
         border-radius: 10px;
-        /* width: fit-content; */
-        margin: 100px;
-        /* margin-left: 33%; */
-        /* background: rgb(75, 72, 72); */
+        /* margin: 100px; */
     }
 
     .input-container {
@@ -67,7 +104,7 @@ console.log(formSubmission);
         align-items: center;
         justify-content: center;
         color: white;
-        padding: 30px;
+        /* padding: 10rem; */
         border-radius: 10px;
 
     }
@@ -84,10 +121,11 @@ console.log(formSubmission);
         border-radius: 10px;
         border: none;
         outline: none;
+        width: 22rem;
         background: #e7e9eb;
         color: rgb(11, 11, 11);
         font-size: 1.2rem;
-        border: solid 2px rgb(138, 21, 211);
+        /* border: solid 2px rgb(138, 21, 211); */
         /* width: 50%; */
         font-family: 'Ubuntu', sans-serif;
 
@@ -97,14 +135,16 @@ console.log(formSubmission);
         margin-top: 1rem;
         padding: 1rem;
         /* width: 85%; */
+        width: 22rem;
+
         border-radius: 10px;
         border: none;
         outline: none;
         background: #e7e9eb;
         color: rgb(8, 6, 6);
         font-size: 1.2rem;
-        width: 15.3rem;
-        border: solid 2px rgb(138, 21, 211);
+        /* width: 15.3rem; */
+        /* border: solid 2px rgb(138, 21, 211); */
         font-family: 'Ubuntu', sans-serif;
 
     }
