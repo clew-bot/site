@@ -45,6 +45,24 @@ import visu from "@/assets/proj/visu.png"
 </template>
 <style>
 
+@media screen and (max-width: 768px) {
+  .proj-bg {
+    background-color: #606268 !important;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width:  100% !important;
+    height: 500px;
+    border-radius: 5px !important;
+    position: relative;
+  }
+  .proj-image {
+    width: 100% !important;
+    height: 50% !important;
+    border-radius: 10px;
+  }
+}
+
   .proj-desc {
 
     font-weight: 400;

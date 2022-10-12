@@ -21,8 +21,6 @@ const sendForm = async () => {
   const data = await response.json()
     console.log(data)   
 };
-
-console.log(formSubmission);
 </script>
 
 <template>
@@ -55,7 +53,15 @@ console.log(formSubmission);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    justify-content: center !important;
+    gap: 0 !important; 
+  }
+  .mobile-phone {
+    padding-left: 55px;
+  }
+  .input-container {
+
+    margin-bottom: 5rem;
   }
 }
 
@@ -93,9 +99,7 @@ console.log(formSubmission);
         align-items: center;
         justify-content: center;
         color: white;
-        /* padding: 20px; */
         border-radius: 10px;
-        /* margin: 100px; */
     }
 
     .input-container {

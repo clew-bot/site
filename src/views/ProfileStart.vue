@@ -53,18 +53,19 @@ const themeStore = useThemeStore();
     color: white !important;
     font-family: 'Silkscreen', cursive;
     padding-top: 1.1rem;
-    /* font-weight: bolder; */
     font-size: 1.3rem;
     font-size: 1.5vw;
-    /* letter-spacing: -4px */
   }
 
   @media screen and (max-width: 768px) {
 
+    main {
+      padding: 1rem;
+    }
+
     .quote {
       margin-left: 0px;
-      font-size: 1.4rem;
-      font-size: 2.3vw;
+      font-size: 3.3vw;
       padding-left: 1rem;
       padding-right: 1rem;
     }

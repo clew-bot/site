@@ -221,6 +221,14 @@
     animation: fadeIn 0.3s ease-in-out forwards;
 }
 
+@media screen and (max-width: 768px) {
+  .hello-wrapper {
+    padding-top: 5rem !important;
+  }
+}
+  
+
+
 .hello-wrapper {
     padding-top: 13rem;
     display: flex;

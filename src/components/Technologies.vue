@@ -63,7 +63,7 @@
       </div>
       </div>
       <div class="col">
-        <h2>Agile Methodologies</h2>
+        <h2>Agile</h2>
         <div class="list-container">
         <p><span class="check">✔</span> ClickUp</p>
         <p><span class="check">✔</span> Slack</p>
@@ -77,32 +77,32 @@
     <div class="exp-container">
       <div class="flex-cont">
         <div class="years-bg">
-          <h2><i>2+</i></h2>
+          <h2 class="first-header"><i>2+</i></h2>
           <h2><i>Years of experience</i></h2>
         </div>
         <div class="years-bg">
-          <h2><i>50+</i></h2>
+          <h2 class="first-header"><i>50+</i></h2>
           <h2><i>Projects completed</i></h2>
         </div>
       </div>
       
       <div class="flex-cont">
         <div class="years-bg">
-          <h2><i>1,000+</i></h2>
+          <h2 class="first-header"><i>1,000+</i></h2>
           <h2><i>Commits on Github</i></h2>
         </div>
         <div class="years-bg">
-          <h2><i>200+</i></h2>
+          <h2 class="first-header"><i>200+</i></h2>
           <h2><i>Hours on Udemy</i></h2>
         </div>
       </div>
       <div class="flex-cont">
         <div class="years-bg">
-          <h2><i>50+</i></h2>
+          <h2 class="first-header"><i>50+</i></h2>
           <h2><i>Leetcode solved</i></h2>
         </div>
         <div class="years-bg">
-          <h2><i>Countless</i></h2>
+          <h2 class="first-header"><i>Countless</i></h2>
           <h2><i>Javascript executions</i></h2>
         </div>
       </div>
@@ -132,6 +132,10 @@
     }
   }
 
+  .first-header {
+    color:purple;
+  }
+
   .exp-container {
     display: flex;
     justify-content: center;
@@ -156,6 +160,17 @@
 
   .years-bg > h2 > i {
     font-weight: 600;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .years-bg {
+      padding: 5px !important;
+    }
+
+    .col {
+      padding: 1.5rem;
+    }
   }
 
   .check {

@@ -48,7 +48,7 @@ const openNav = () => {
 <template>
   <nav>
     <div class="links-container">
-        <div class="appbar" >
+        <div class="appbar" :class="{openBar: !clicked, closedBar: clicked}">
                 <button id="mobile-btn"  @click="openNav"><img :src="mobileicon" alt=""></button>
         </div>
      
@@ -84,16 +84,26 @@ const openNav = () => {
         font-family: 'Silkscreen', cursive;
     }
 
+    .openBar {
+    background: rgba(204, 196, 200, 0.964);
+    transition: all 0.5s ease-in-out;
 
+    }
+
+    .closedBar {
+        background: none;
+        transition: all 0.3s ease-in-out;
+    }
 
     .openNavigation {
         opacity: 1;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     .closeNavigation {
         opacity: 0;
         transition: all 0.5s ease-in-out;
+        /* display: none; */
     }
 
     .slideInText {
