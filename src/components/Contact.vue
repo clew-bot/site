@@ -23,20 +23,19 @@ const sendForm = async () => {
 };
 
 console.log(formSubmission);
-
-
-
 </script>
 
 <template>
   <footer>
     <div class="contact-container">
-        <h1 class="getIn">Contact</h1>
+        <h1 class="getIn">Contact 📇</h1>
       <div class="container">
         <div class="contactIcon">
           <MobilePhone class="mobile-phone"/>
         </div>
+        <div class="bg-wave"></div>
         <div class="input-container">
+     
         <input  placeholder="Name" v-model="formSubmission.fullName">
         <input placeholder="What's your email?" v-model="formSubmission.email">
         <textarea placeholder="Your message..." v-model="formSubmission.message"></textarea>
@@ -51,12 +50,12 @@ console.log(formSubmission);
 
 
 <style>
-
 @media screen and (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
 }
 
@@ -80,7 +79,8 @@ console.log(formSubmission);
 
   .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5rem;
     align-items: center;
     /* background: rgb(46, 46, 46); */
     border-radius: 5px;
@@ -113,6 +113,8 @@ console.log(formSubmission);
         font-size: 3rem;
         /* margin-bottom: 2rem; */
         font-weight: bolder;
+        margin-bottom: -2rem;
+        margin-top: 2rem;
     }
 
     input {

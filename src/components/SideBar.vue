@@ -4,12 +4,12 @@
 import { reactive, watch, ref, computed } from 'vue';
 import { useThemeStore } from '@/stores/themeStore';
 
-type LinkDefinition = {
+export type LinkDefinition = {
   name: string;
   path: string;
 }
 
-interface Links {
+export interface Links {
   home : LinkDefinition,
   github : LinkDefinition,
   linkedin : LinkDefinition,
@@ -40,7 +40,7 @@ const themeStore = useThemeStore();
 <template>
 
     <header :class="themeStore.theme+'wrapper'">
-        <nav>
+        <nav class="mobile">
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
             <a :href="links.path" class="target"><p>{{ links.name }}</p></a>
@@ -52,7 +52,7 @@ const themeStore = useThemeStore();
   </template>
 <style>
 
-  nav {
+  .mobile {
     letter-spacing: -4px;
     display: flex;
     margin-top: 2.5rem !important;

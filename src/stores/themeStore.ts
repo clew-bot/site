@@ -23,3 +23,12 @@ export const useThemeStore = defineStore('theme', () => {
 
   return { theme, isDark, toggleTheme }
 })
+
+export const useOverFlowStore = defineStore("overflow", () => {
+  const overflow = ref("visible");
+  const toggleOverflow = ():void => {
+    overflow.value = overflow.value === "visible" ? "hidden" : "visible";
+    document.getElementsByTagName("body")[0].style.overflow = overflow.value;
+  }
+  return { overflow, toggleOverflow };
+})

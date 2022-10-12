@@ -113,6 +113,13 @@
 
 
 <style>
+
+  @media (max-width: 768px) {
+    .years-bg {
+      padding: 0px !important;
+    }
+  }
+
   @keyframes flipCard {
     0% {
       transform: rotateY(0deg);

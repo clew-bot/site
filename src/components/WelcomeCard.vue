@@ -83,7 +83,7 @@
         </div>
         <div class="rightSide">
             <!-- <img class="macbook" :src="Macbook" alt="Macbook" /> -->
-            <Programmer :theme="themeStore.theme"/>
+            <Programmer :theme="themeStore.theme" class="programmer" />
         </div>
     </div>
   
@@ -93,6 +93,9 @@
 
 
 <style>
+
+  .programmer {
+  }
 
   .wavy {
   animation-name: wave-animation; 

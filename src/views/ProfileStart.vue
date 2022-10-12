@@ -4,6 +4,7 @@ import ProjectCard from '@/components/Technologies.vue'
 import SideBar from '@/components/SideBar.vue'
 import ExpCard from '@/components/ExpCard.vue'
 import Contact from '@/components/Contact.vue'
+import MobileNav from '@/components/MobileNav.vue'
 
 
 import { useThemeStore } from '@/stores/themeStore'
@@ -18,6 +19,11 @@ const themeStore = useThemeStore();
     <div class="sidebar">
     <SideBar/>
   </div>
+  <div class="mobileNav">
+    <MobileNav/>
+  </div>
+
+
     <div class="bodys">
     <WelcomeCard />
   </div>
@@ -25,7 +31,7 @@ const themeStore = useThemeStore();
   <div class="bodys">
     <ProjectCard />
     </div>
-    <div :class="themeStore.theme+'block'"></div>
+    <div :class="themeStore.theme+'block'"><h2 class="quote">“Never waste your suffering. It's powerful stuff, the most powerful stuff there is. Use it. Transform from it. Learn. Grow. Be better.” <span><i>-Elizabeth Gilbert</i></span></h2></div>
     <div class="bodys">
     <ExpCard />
     </div>
