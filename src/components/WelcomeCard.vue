@@ -38,7 +38,6 @@
 
     const selected = ref("");
     watch(selected, (val: any) => {
-        console.log("Watching! ", val)
         themeStore.toggleTheme(val.value);
     });
 
@@ -67,14 +66,7 @@
                 <h3>{{descriptor.descriptionTwo}}</h3>
                 <h3>{{descriptor.descriptionThree}}</h3>
             </div>
-            <!-- <div class="outer-bg">
-        <button
-          class="say-something"
-          @click="clickHandler"
-          :class="{ isCLicked: clicked }"
-          ><i>Resume</i></button
-        >
-      </div> -->
+    
 <div style="width: 10rem; padding: 1rem" class="select-container">
       <v-select placeholder="Theme" class="style-chooser" :options="options" name="Colors" id="colors" v-model="selected">
 

@@ -1,14 +1,72 @@
 :root {
   --green-color: #386633;
   --green-color-second: #5faf67;
+  --green-color-third: #a8d08d;
 }
 
 #app {
-
     margin: 0 auto;
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
   }
+
+  @media (max-width: 768px) {
+    .greenyears-bg {
+      font-size: .7rem !important;
+    }
+  }
+  .greendescriptions {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .greenexperience {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: black;
+  }
+
+  .greentitle-bg {
+    background: var(--green-color-second);
+    width: fit-content;
+    padding: 0 10px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    transform: skewY(-5deg);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .greendesc-bg {
+    background: var(--green-color-second);
+    width: fit-content;
+    padding: 0 10px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .greenyears-bg {
+    background: var(--green-color-second);;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .greenyears-bg > h2 > i {
+    font-weight: 600;
+  }
+
+
 
   .greenexpTitle {
     color: var(--green-color-second);

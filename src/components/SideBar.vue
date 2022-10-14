@@ -45,7 +45,7 @@ const themeStore = useThemeStore();
 
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
-            <a :href="links.path" class="target"><p>{{ links.name }}</p></a>
+            <a target="_blank" :href="links.path" class="target"><p>{{ links.name }}</p></a>
         </div>
       </div>
         </nav>

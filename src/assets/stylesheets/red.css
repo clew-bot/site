@@ -2,6 +2,7 @@
 --red-color: #c2324a;
 --white-color: rgb(223, 222, 222);
 --red-color-second: #e75268;
+--red-color-third: #eeeeee;
 }
 #app {
     margin: 0 auto;
@@ -9,8 +10,69 @@
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
   }
+  @media (max-width: 768px) {
+    .redyears-bg {
+      font-size: .7rem !important;
+    }
+  }
 
-  
+  .reddescriptions {
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .reddescriptions > i {
+
+    font-weight: 700;
+  }
+
+  .redexperience {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white !important;
+
+  }
+
+  .redtitle-bg {
+    background: var(--red-color-second);
+    width: fit-content;
+    padding: 0 10px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    transform: skewY(-5deg);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .reddesc-bg {
+    background: var(--red-color-second);
+    width: fit-content;
+    padding: 0 10px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .redyears-bg {
+    background: var(--red-color-second);;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .redyears-bg > h2 > i {
+    font-weight: 600;
+  }
+
 
   .redexpTitle {
     color: var(--red-color-second);
@@ -25,7 +87,7 @@
   }
 
   .redfirst-header {
-    color: var(--red-color);
+    color: var(--red-color-third);
   }
 
   .redblock {

@@ -8,11 +8,11 @@ const themeStore = useThemeStore();
 </script>
 <template>
   <div>
-    <div class="title-bg">
-      <h1 class="experience">Projects</h1>
+    <div :class="themeStore.theme+'title-bg'">
+      <h1  :class="themeStore.theme+'experience'">Projects</h1>
     </div>
-    <div class="desc-bg">
-      <h3 class="descriptions"><i>Portfolio worthy applications</i></h3>
+    <div :class="themeStore.theme+'desc-bg'">
+      <h3 :class="themeStore.theme+'descriptions'"><i>Portfolio worthy applications</i><span>&nbsp;🙌</span></h3>
       </div>  
       <div class="proj-container">
         <div class="proj-bg">

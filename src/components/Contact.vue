@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import contact from '@/assets/svgs/contact.jpg';
 import MobilePhone from '@/components/MobilePhone.vue'
 
@@ -8,9 +8,10 @@ const formSubmission = reactive({
   email: '',
   message: '',
 });
-
+const clicked = ref(false);
 const sendForm = async () => {
-  console.log(formSubmission);
+  // console.log(formSubmission);
+  clicked.value = !clicked.value;
   const response = await fetch("https://hook.us1.make.com/xph38w7k5be2tleb92oycg53nmjb63k5", {
     method: "POST",
     headers: {
@@ -37,7 +38,15 @@ const sendForm = async () => {
         <input  placeholder="Name" v-model="formSubmission.fullName">
         <input placeholder="What's your email?" v-model="formSubmission.email">
         <textarea placeholder="Your message..." v-model="formSubmission.message"></textarea>
-        <button class="send-btn" @click="sendForm">Send</button>
+
+                <div class="outer-bg">
+        <button
+          class="say-something"
+          @click="sendForm"
+          :class="{ isCLicked: clicked }"
+          >Send</button
+        >
+      </div>
     </div>
 
   </div>
@@ -48,6 +57,49 @@ const sendForm = async () => {
 
 
 <style>
+
+.say-something {
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  width: 8rem;
+  transform: translateY(-1.225rem);
+  text-transform: none;
+  letter-spacing: 0px;
+  padding: 10px !important;
+  color: rgb(241, 240, 240);
+  font-weight: bolder;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgb(206, 206, 21) 0%,
+    rgb(161, 161, 15) 14.06%,
+    rgb(153, 180, 35) 83.85%,
+    rgb(217, 217, 23) 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+
+    .say-something:hover {
+  transform: translateY(-1.425rem);
+}
+    .outer-bg {
+  background: rgb(94, 125, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block !important;
+  border-radius: 10px;
+  transform: translateY(20px);
+  height: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+    .isCLicked {
+  transition: all 0.3s ease-in-out;
+  animation: clickDownAndUp 0.3s ease-in-out;
+}
 @media screen and (max-width: 768px) {
   .container {
     display: flex;
@@ -60,7 +112,6 @@ const sendForm = async () => {
     padding-left: 55px;
   }
   .input-container {
-
     margin-bottom: 5rem;
   }
 }
@@ -88,25 +139,23 @@ const sendForm = async () => {
     width: 100%;
   }
 
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        border-radius: 10px;
-    }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+  }
 
-    .input-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        /* padding: 10rem; */
-        border-radius: 10px;
-
-    }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+  }
 
     .getIn {
         font-size: 3rem;

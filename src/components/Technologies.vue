@@ -6,11 +6,11 @@ const themeStore = useThemeStore();
     </script>
 <template>
   <section class="section">
-    <div class="title-bg">
-    <h1 class="experience">Experience</h1>
+    <div :class="themeStore.theme+'title-bg'">
+    <h1 :class="themeStore.theme+'experience'">Experience</h1>
   </div>
-  <div class="desc-bg">
-    <h3 class="descriptions"><i>I've worked with a handful of amazing technologies over the years.</i></h3>
+  <div :class="themeStore.theme+'desc-bg'">
+    <h3 :class="themeStore.theme+'descriptions'"><i>I've worked with a handful of amazing technologies over the years.</i></h3>
   </div>
     <div class="icon-container">
       <div class="col">
@@ -77,32 +77,32 @@ const themeStore = useThemeStore();
     </div>
     <div class="exp-container">
       <div class="flex-cont">
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>2+</i></h2>
           <h2><i>Years of experience</i></h2>
         </div>
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>50+</i></h2>
           <h2><i>Projects completed</i></h2>
         </div>
       </div>
       
       <div class="flex-cont">
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>1,000+</i></h2>
           <h2><i>Commits on Github</i></h2>
         </div>
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>200+</i></h2>
           <h2><i>Hours on Udemy</i></h2>
         </div>
       </div>
       <div class="flex-cont">
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>50+</i></h2>
           <h2><i>Leetcode solved</i></h2>
         </div>
-        <div class="years-bg">
+        <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>Countless</i></h2>
           <h2><i>Javascript executions</i></h2>
         </div>
@@ -114,6 +114,10 @@ const themeStore = useThemeStore();
 
 
 <style>
+
+.desc-bg {
+  background: hotpink;
+}
 
   @media (max-width: 768px) {
     .years-bg {
@@ -148,7 +152,7 @@ const themeStore = useThemeStore();
   }
 
   .years-bg {
-    background: #f4efef;
+    background: #5a93ba;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
@@ -156,12 +160,10 @@ const themeStore = useThemeStore();
     -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     margin-bottom: 1rem;
     margin-right: 1rem;
-    /* animation: flipCard 2s ease-in-out; */
   }
 
   .years-bg > h2 > i {
     font-weight: 600;
-
   }
 
   @media screen and (max-width: 768px) {

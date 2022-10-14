@@ -10,6 +10,66 @@
         font-family: 'Ubuntu', sans-serif;
       }
 
+      .defaultdescriptions {
+        text-align: left;
+        font-size: 1.5rem;
+        color: var(--white-blue-second);
+        padding: 5px;
+      }
+
+      .defaultexperience {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--white-blue-second);
+      }
+    
+      .defaulttitle-bg {
+        background: var(--default-color);
+        width: fit-content;
+        padding: 0 10px;
+        margin-top: 3rem;
+        border-radius: 5px;
+        transform: skewY(-5deg);
+        box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+      }
+    
+      .defaultdesc-bg {
+        background: var(--default-color);
+        color: hotpink !important;
+        width: fit-content;
+        padding: 0 10px;
+        margin-top: 3rem;
+        border-radius: 5px;
+        box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+      }
+    
+      @media (max-width: 768px) {
+        .defaultyears-bg {
+          font-size: .7rem !important;
+        }
+      }
+
+      .defaultyears-bg {
+        background: var(--default-color-second);
+        border-radius: 5px;
+        padding: 15px;
+        box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+      }
+    
+      .defaultyears-bg > h2 > i {
+        font-weight: 600;
+      }
+    
+
       .defaultexpTitle {
         color: var(--default-color-second);
       }
