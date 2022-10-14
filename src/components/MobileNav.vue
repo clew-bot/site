@@ -69,7 +69,7 @@ const openNav = () => {
         :key="links.name"
       >
         <a :href="links.path" class="target" :target="links.target">
-          ><p>{{ links.name }}</p></a
+          <p>{{ links.name }}</p></a
         >
       </div>
     </div>
