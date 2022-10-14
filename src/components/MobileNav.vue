@@ -7,6 +7,7 @@ import { useOverFlowStore } from "../stores/themeStore";
 export type LinkDefinition = {
   name: string;
   path: string;
+  target: string;
 };
 
 export interface Links {
@@ -19,18 +20,22 @@ const navLinks = reactive<Links>({
   home: {
     name: "Home",
     path: "/",
+    target: "_self",
   },
   github: {
     name: "Github",
     path: "https://github.com/clew-bot",
+    target: "_blank",
   },
   linkedin: {
     name: "LinkedIn",
     path: "https://www.linkedin.com/in/chad-l-7586711a0/",
+    target: "_blank",
   },
   instagram: {
     name: "Instagram",
     path: "https://www.instagram.com/chad.lew/",
+    target: "_blank",
   },
 });
 
@@ -63,7 +68,7 @@ const openNav = () => {
         v-for="links in navLinks"
         :key="links.name"
       >
-        <a :href="links.path" class="target" target="_blank"
+        <a :href="links.path" class="target" :target="links.target">
           ><p>{{ links.name }}</p></a
         >
       </div>
