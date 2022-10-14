@@ -1,8 +1,9 @@
 :root {
 --red-color: #c2324a;
 --white-color: rgb(223, 222, 222);
---red-color-second: #e75268;
+--red-color-second: #f36161;
 --red-color-third: #eeeeee;
+--red-color-fourth: #871515;
 }
 #app {
     margin: 0 auto;
@@ -10,9 +11,33 @@
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
   }
+
+  .redproj-bg {
+    background-color: var(--red-color-fourth);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    height: 500px;
+    border-radius: 1px;
+    position: relative;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  }
   @media (max-width: 768px) {
     .redyears-bg {
       font-size: .7rem !important;
+    }
+    .reddesc-bg {
+      margin-left: .6rem;
+    }
+    .redtitle-bg {
+      margin-left: .6rem;
+    }  
+    .redyears-bg {
+      margin: .5rem !important; 
     }
   }
 

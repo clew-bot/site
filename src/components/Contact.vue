@@ -10,7 +10,6 @@ const formSubmission = reactive({
 });
 const clicked = ref(false);
 const sendForm = async () => {
-  // console.log(formSubmission);
   clicked.value = !clicked.value;
   const response = await fetch("https://hook.us1.make.com/xph38w7k5be2tleb92oycg53nmjb63k5", {
     method: "POST",

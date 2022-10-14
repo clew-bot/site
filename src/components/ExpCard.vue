@@ -3,6 +3,9 @@ import wordScrambler from '@/assets/proj/wordScrambler.png'
 import altitude from "@/assets/proj/altitude.png"
 import socially from "@/assets/proj/socially.png"
 import visu from "@/assets/proj/visu.png"
+import github from "@/assets/logos/github.png"
+import Octocat from "@/assets/logos/Octocat.png"
+
 import { useCounterStore, useThemeStore } from "../stores/themeStore";
 const themeStore = useThemeStore();
 </script>
@@ -15,30 +18,36 @@ const themeStore = useThemeStore();
       <h3 :class="themeStore.theme+'descriptions'"><i>Portfolio worthy applications</i><span>&nbsp;🙌</span></h3>
       </div>  
       <div class="proj-container">
-        <div class="proj-bg">
-          <img :src="altitude" alt="word scrambling game" class="proj-image">
+        <div :class="themeStore.theme+'proj-bg'">
+          <img :src="altitude" alt="altitude" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">altitude</h1>
           <p class="proj-desc">Custom Social Media site I wrote using Vue/Vuex and Express. Uses MongoDB and AWS for storage. Vuetify for theming and custom CSS. Add friends, make your custom profile, find friends, like users and more.</p>
-          <p class="made-with">Made with Vue</p>
+          <p class="made-with">Made with Vue </p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/Altitude"><img :src="Octocat" alt="" class="octo"></a>
+       
         </div>
-        <div class="proj-bg">
-          <img :src="socially" alt="word scrambling game" class="proj-image">
+        <div :class="themeStore.theme+'proj-bg'">
+          <img :src="socially" alt="socially" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">socially</h1>
           <p class="proj-desc">Custom Social Media site using React/Redux Toolkit and Express. Uses MongoDB for storage. Create a profile and talk to users in the global chat!</p>
           <p class="made-with">Made with React</p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/Socially"><img :src="Octocat" alt="" class="octo"></a>
 
         </div>
-        <div class="proj-bg">
+        <div  :class="themeStore.theme+'proj-bg'">
           <img :src="wordScrambler" alt="word scrambling game" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">word scrambler</h1>
           <p class="proj-desc">Fun word scrambling game users can play up to 10 points. Guess the words in order and try to type it out. Yellow spaces are meant for spaces.</p>
           <p class="made-with">Made with Vue</p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/Vue-Word-Scrambler"><img :src="Octocat" alt="" class="octo"></a>
+
         </div>
-        <div class="proj-bg">
-          <img :src="visu" alt="word scrambling game" class="proj-image">
+        <div :class="themeStore.theme+'proj-bg'">
+          <img :src="visu" alt="visualizer" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">visualizer</h1>
           <p class="proj-desc">Visualize the sound of your music! Input any song and watch your audio move. Made with the AudioContext API and Canvas API.</p>
           <p class="made-with">Made with Javascript</p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/music-visualizer"><img :src="Octocat" alt="" class="octo"></a>
         </div>
       </div>
       <div class="seeMore">
@@ -47,6 +56,24 @@ const themeStore = useThemeStore();
   </div>
 </template>
 <style>
+
+.linkz{
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 1rem;
+}
+
+.linkz:hover{
+  background: none !important;
+}
+
+.octo {
+  margin-left: 15.5rem;
+  height: 3rem;
+
+}
 
 @media screen and (max-width: 768px) {
   .proj-bg {
@@ -93,14 +120,18 @@ const themeStore = useThemeStore();
   }
 
   .proj-bg {
-    background-color: #1a202c;
+    background-color: #31204d;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    width: 300px;
     height: 500px;
     border-radius: 1px;
     position: relative;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
   }
 
   .proj-container {

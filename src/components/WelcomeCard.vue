@@ -25,7 +25,7 @@
         emoji: '👋',
         headline: "Full Stack Engineer",
         descriptionOne: 'I\'m a Full Stack Software Engineer by trade in Southern California.',
-        descriptionTwo: 'I enjoy coding, playing disc golf, and spending time with my family',
+        descriptionTwo: 'I enjoy coding, playing disc golf, and spending time with my family.',
         descriptionThree: 'Here\'s a brief tour of what I\'ve been working on.'
     });
 

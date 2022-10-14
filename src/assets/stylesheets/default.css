@@ -10,6 +10,39 @@
         font-family: 'Ubuntu', sans-serif;
       }
 
+      @media (max-width: 768px) {
+        .defaultyears-bg {
+          font-size: .7rem !important;
+        }
+        .defaultdesc-bg {
+          margin-left: .6rem;
+        }
+        .defaulttitle-bg {
+          margin-left: .6rem;
+        }  
+        .defaultyears-bg {
+          margin: .5rem !important; 
+        }
+        .defaultproj-bg {
+          height: 595px !important;
+        }
+      }
+
+      .defaultproj-bg {
+        background-color: #31204d;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        height: 500px;
+        border-radius: 1px;
+        position: relative;
+        width: 320px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+      }
+
       .defaultdescriptions {
         text-align: left;
         font-size: 1.5rem;
@@ -51,6 +84,15 @@
       @media (max-width: 768px) {
         .defaultyears-bg {
           font-size: .7rem !important;
+        }
+        .defaultdesc-bg {
+          margin-left: .6rem;
+        }
+        .defaulttitle-bg {
+          margin-left: .6rem;
+        }  
+        .defaultyears-bg {
+          margin: .5rem !important; 
         }
       }
 

@@ -3,6 +3,7 @@
   --blue-color-second: #76b6e3;
   --white-blue: #f2f2f3;
   --white-blue-second: #fff2f7;
+  --blue-color-third: #29415e;
 }
 
 #app {
@@ -10,6 +11,21 @@
     margin: 0 auto;
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
+  }
+
+  .blueproj-bg {
+    background-color: var(--blue-color-third);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    height: 500px;
+    border-radius: 1px;
+    position: relative;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
   }
 
   @media (max-width: 768px) {

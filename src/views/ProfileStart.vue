@@ -35,7 +35,7 @@ const themeStore = useThemeStore();
     <div class="bodys">
     <ExpCard />
     </div>
-    <div :class="themeStore.theme+'block'"></div>
+    <div :class="themeStore.theme+'block'"><h2 class="quote">“Uninstall self-doubt from your mind.”<span><i>-Anonymous</i></span></h2></div>
     <div class="bodys">
     <Contact />
     </div>
