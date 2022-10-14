@@ -41,6 +41,8 @@ const themeStore = useThemeStore();
 
     <header :class="themeStore.theme+'wrapper'">
         <nav class="mobile">
+          <div></div>
+
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
             <a :href="links.path" class="target"><p>{{ links.name }}</p></a>

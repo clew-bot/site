@@ -1,5 +1,6 @@
 :root {
   --blue-color: #4e647b;
+  --blue-color-second: rgb(118, 182, 227);
 }
 
 #app {
@@ -7,6 +8,23 @@
     margin: 0 auto;
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
+  }
+
+
+  .blueexpTitle {
+    color: var(--blue-color-second);
+  }
+  
+  .blueproj-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+    color: var(--blue-color-second);
+  }
+
+  .bluefirst-header {
+    color: var(--blue-color);
   }
 
 

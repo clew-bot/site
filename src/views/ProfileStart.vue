@@ -60,7 +60,7 @@ const themeStore = useThemeStore();
   @media screen and (max-width: 768px) {
 
     main {
-      padding: 1rem;
+      /* padding: 1rem; */
     }
 
     .quote {

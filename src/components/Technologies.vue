@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+import { useCounterStore, useThemeStore } from "../stores/themeStore";
+const themeStore = useThemeStore();
 
 
     </script>
@@ -13,7 +14,7 @@
   </div>
     <div class="icon-container">
       <div class="col">
-        <h2>Languages</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Languages</h2>
         <div class="list-container">
         <p><span class="check">✔</span> Typescript</p>
         <p><span class="check">✔</span> Javascript</p>
@@ -25,7 +26,7 @@
 
       </div>
       <div class="col">
-        <h2>Servers</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Servers</h2>
       <div class="list-container">
         <p><span class="check">✔</span> NodeJS</p>
         <p><span class="check">✔</span> ExpressJS</p>
@@ -33,7 +34,7 @@
       </div>
       </div>
       <div class="col">
-        <h2>Libraries/Frameworks</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Libraries/Frameworks</h2>
         <div class="list-container">
         <p><span class="check">✔</span> Vue</p>
         <p><span class="check">✔</span> React</p>
@@ -46,7 +47,7 @@
 
       </div>
       <div class="col">
-        <h2>Databases</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Databases</h2>
         <div class="list-container">
         <p><span class="check">✔</span> SQL</p>
         <p><span class="check">✔</span> MongoDB</p>
@@ -55,7 +56,7 @@
       </div>
       </div>
       <div class="col">
-        <h2>Devops</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Devops</h2>
         <div class="list-container">
         <p><span class="check">✔</span> Docker</p>
         <p><span class="check">✔</span> AWS</p>
@@ -63,7 +64,7 @@
       </div>
       </div>
       <div class="col">
-        <h2>Agile</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Agile</h2>
         <div class="list-container">
         <p><span class="check">✔</span> ClickUp</p>
         <p><span class="check">✔</span> Slack</p>
@@ -77,32 +78,32 @@
     <div class="exp-container">
       <div class="flex-cont">
         <div class="years-bg">
-          <h2 class="first-header"><i>2+</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>2+</i></h2>
           <h2><i>Years of experience</i></h2>
         </div>
         <div class="years-bg">
-          <h2 class="first-header"><i>50+</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>50+</i></h2>
           <h2><i>Projects completed</i></h2>
         </div>
       </div>
       
       <div class="flex-cont">
         <div class="years-bg">
-          <h2 class="first-header"><i>1,000+</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>1,000+</i></h2>
           <h2><i>Commits on Github</i></h2>
         </div>
         <div class="years-bg">
-          <h2 class="first-header"><i>200+</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>200+</i></h2>
           <h2><i>Hours on Udemy</i></h2>
         </div>
       </div>
       <div class="flex-cont">
         <div class="years-bg">
-          <h2 class="first-header"><i>50+</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>50+</i></h2>
           <h2><i>Leetcode solved</i></h2>
         </div>
         <div class="years-bg">
-          <h2 class="first-header"><i>Countless</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>Countless</i></h2>
           <h2><i>Javascript executions</i></h2>
         </div>
       </div>
@@ -147,7 +148,7 @@
   }
 
   .years-bg {
-    background: #f5f5f5;
+    background: #f4efef;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
@@ -192,7 +193,7 @@
   .col > h2 {
     font-size: 1.9rem;
     margin-bottom: 1rem;
-    color: #f5f5f5;
+    /* color: #f5f5f5; */
     font-weight: 800;
   }
 

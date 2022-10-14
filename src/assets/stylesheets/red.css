@@ -1,12 +1,29 @@
 :root {
 --red-color: #c2324a;
 --white-color: rgb(223, 222, 222);
+--red-color-second: #e75268;
 }
 #app {
     margin: 0 auto;
     background: rgb(202, 23, 23);
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
+  }
+
+  .redexpTitle {
+    color: var(--red-color-second);
+  }
+  
+  .redproj-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+    color: var(--red-color-second);
+  }
+
+  .redfirst-header {
+    color: var(--red-color);
   }
 
   .redblock {

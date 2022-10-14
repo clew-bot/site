@@ -1,5 +1,6 @@
 :root {
   --green-color: #386633;
+  --green-color-second: #5faf67;
 }
 
 #app {
@@ -7,6 +8,22 @@
     margin: 0 auto;
     font-weight: normal;
     font-family: 'Ubuntu', sans-serif;
+  }
+
+  .greenexpTitle {
+    color: var(--green-color-second);
+  }
+
+  .greenproj-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+    color: var(--green-color-second);
+  }
+
+  .greenfirst-header {
+    color: var(--green-color);
   }
 
 
