@@ -18,7 +18,6 @@ export const useThemeStore = defineStore('theme', () => {
 
   const toggleTheme = (color:string):void => {
       theme.value = color;
-      console.log("The new theme is: ", theme.value);
   }
 
   return { theme, isDark, toggleTheme }

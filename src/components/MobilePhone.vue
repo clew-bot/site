@@ -5,8 +5,6 @@ const props = defineProps(["theme"]);
 const green = "#386633";
 const blue = "#4e647b";
 const red = "#c2324a";
-console.log("hi");
-console.log("props: ", props.theme);
 
 const color = computed(() => {
   if (props.theme === "green") {

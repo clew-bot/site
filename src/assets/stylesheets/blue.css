@@ -16,6 +16,16 @@
     .blueyears-bg {
       font-size: .7rem !important;
     }
+
+    .bluedesc-bg {
+      margin-left: .6rem;
+    }
+    .bluetitle-bg {
+      margin-left: .6rem;
+    }  
+    .blueyears-bg {
+      margin: .5rem !important; 
+    }
   }
 
   .bluedescriptions {

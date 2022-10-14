@@ -45,7 +45,7 @@ const overflowStore = useOverFlowStore();
 const openNav = () => {
   clicked.value = !clicked.value;
   document.getElementsByTagName("body")[0].style.overflow =
-    overflowStore.overflow;
+  overflowStore.overflow;
   overflowStore.toggleOverflow();
 };
 </script>
