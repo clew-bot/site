@@ -79,16 +79,11 @@ const sendForm = async () => {
     margin-top: 1rem;
   }
 
-  .mobile-phone {
-    /* margin: 100px; */
-  }
-
   .container {
     display: flex;
     justify-content: center;
     gap: 5rem;
     align-items: center;
-    /* background: rgb(46, 46, 46); */
     border-radius: 5px;
     width: 100%;
   }
@@ -131,26 +126,19 @@ const sendForm = async () => {
         background: #e7e9eb;
         color: rgb(11, 11, 11);
         font-size: 1.2rem;
-        /* border: solid 2px rgb(138, 21, 211); */
-        /* width: 50%; */
         font-family: 'Ubuntu', sans-serif;
-
     }
 
     textarea {
         margin-top: 1rem;
         padding: 1rem;
-        /* width: 85%; */
         width: 22rem;
-
         border-radius: 10px;
         border: none;
         outline: none;
         background: #e7e9eb;
         color: rgb(8, 6, 6);
         font-size: 1.2rem;
-        /* width: 15.3rem; */
-        /* border: solid 2px rgb(138, 21, 211); */
         font-family: 'Ubuntu', sans-serif;
 
     }

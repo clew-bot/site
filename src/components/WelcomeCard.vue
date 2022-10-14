@@ -230,7 +230,7 @@
 
 
 .hello-wrapper {
-    /* padding-top: 13rem; */
+    padding-top: 13rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

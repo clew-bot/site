@@ -64,6 +64,12 @@ const openNav = () => {
 
 <style>
 
+@media screen and (min-width: 769px) {
+    nav {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px)  {
 
     /* body{ 
@@ -104,6 +110,7 @@ const openNav = () => {
         opacity: 0;
         transition: all 0.5s ease-in-out;
         /* display: none; */
+        visibility: hidden;
     }
 
     .slideInText {
@@ -171,6 +178,5 @@ const openNav = () => {
     50% {
         transform: translateX(100%);
     }
- 
 }
 </style>
