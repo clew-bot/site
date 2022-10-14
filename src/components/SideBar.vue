@@ -7,6 +7,7 @@ import { useThemeStore } from '@/stores/themeStore';
 export type LinkDefinition = {
   name: string;
   path: string;
+  target: string;
 }
 
 export interface Links {
@@ -19,19 +20,23 @@ export interface Links {
 const navLinks = reactive<Links>({
   home: {
     name: 'Home',
-    path: '/'
+    path: '/',
+    target: '_self'
   },
   github: {
     name: 'Github',
-    path: 'https://github.com/clew-bot'
+    path: 'https://github.com/clew-bot',
+    target: "_blank"
   },
   linkedin: {
     name: 'LinkedIn',
-    path: 'https://www.linkedin.com/in/chad-l-7586711a0/'
+    path: 'https://www.linkedin.com/in/chad-l-7586711a0/',
+    target: "_blank"
   },
   instagram: {
     name: 'Instagram',
     path: 'https://www.instagram.com/chad.lew/',
+    target: "_blank"
   }
 });
 
@@ -45,7 +50,7 @@ const themeStore = useThemeStore();
 
           <div class="links-container">
           <div class="link" v-for="links in navLinks" :key="links.name">
-            <a target="_blank" :href="links.path" class="target"><p>{{ links.name }}</p></a>
+            <a :target="links.target" :href="links.path" class="target"><p>{{ links.name }}</p></a>
         </div>
       </div>
         </nav>
