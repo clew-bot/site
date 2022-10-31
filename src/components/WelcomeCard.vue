@@ -4,7 +4,6 @@
     import { useCounterStore, useThemeStore } from "../stores/themeStore";
     import Programmer from '@/components/Programmer.vue'
 
-    import Macbook from '@/assets/logos/macbook.jpg'
     import Green from "@/assets/images/green.jpg";
     import Blue from "@/assets/images/blue.jpg";
     import Red from "@/assets/images/red.jpg";
