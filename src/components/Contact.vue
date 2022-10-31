@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
-import contact from '@/assets/svgs/contact.jpg';
 import MobilePhone from '@/components/MobilePhone.vue'
 
 const formSubmission = reactive({
