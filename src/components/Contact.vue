@@ -22,8 +22,15 @@ const sendForm = async () => {
     },
     body: JSON.stringify(formSubmission),
   });
-  const data = await response.json()
-    console.log(data)   
+  const data = await response.text()
+    console.log(data)  
+    
+    formSubmission.fullName = '';
+    formSubmission.email = '';
+    formSubmission.message = '';
+    clicked.value = !clicked.value;
+    
+  alert('Message sent successfully');
 };
 </script>
 

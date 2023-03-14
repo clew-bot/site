@@ -31,7 +31,7 @@ const themeStore = useThemeStore();
         </div>
         <div :class="themeStore.theme+'proj-bg'">
           <img :src="altine" alt="altine" class="proj-image">
-          <h1 :class="themeStore.theme+'proj-title'">altitude</h1>
+          <h1 :class="themeStore.theme+'proj-title'">altine</h1>
           <p class="proj-desc altine">Yet another custom Social Media site built with Nuxt 3, Typescript, Nitro, and Vue. Users can upload photos and videos to their profile/feed and share them. React with custom emoticons and favorite other users posts. Uses Vuetify for styling and. Completely customize your profile with descriptions, cover photos, videos, and more.</p>
           <p class="made-with">Made with Nuxt </p>
           <a class="linkz" target="_blank" href="https://github.com/clew-bot/Altine"><img :src="Octocat" alt="" class="octo"></a>
