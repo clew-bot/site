@@ -3,6 +3,9 @@ import wordScrambler from '@/assets/proj/wordScrambler.png'
 import altitude from "@/assets/proj/altitude.png"
 import socially from "@/assets/proj/socially.png"
 import visu from "@/assets/proj/visu.png"
+import altine from "@/assets/proj/altine.png"
+import purplev3 from "@/assets/proj/purplev3.png"
+
 import github from "@/assets/logos/github.png"
 import Octocat from "@/assets/logos/Octocat.png"
 
@@ -18,6 +21,22 @@ const themeStore = useThemeStore();
       <h3 :class="themeStore.theme+'descriptions'"><i>Portfolio worthy applications</i><span>&nbsp;🙌</span></h3>
       </div>  
       <div class="proj-container">
+        <div :class="`${themeStore.theme}proj-bg purpleCont`">
+          <img :src="purplev3" alt="purplev3" class="proj-image purplev3">
+          <h1 :class="themeStore.theme+'proj-title'">Purple v3</h1>
+          <p class="proj-desc altine">Purple v3 is a MMORPG Discord bot game with multiple functionalities. Users can grind skills by hunting, fishing, chopping, entering the dungeon, compete in fishing contests, and much more. Uses DiscordJS library and MongoDB for the database. (Repository is currently private)</p>
+          <p class="made-with">Made with Javascript </p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/Purple_v3"><img :src="Octocat" alt="" class="octo"></a>
+       
+        </div>
+        <div :class="themeStore.theme+'proj-bg'">
+          <img :src="altine" alt="altine" class="proj-image">
+          <h1 :class="themeStore.theme+'proj-title'">altitude</h1>
+          <p class="proj-desc altine">Yet another custom Social Media site built with Nuxt 3, Typescript, Nitro, and Vue. Users can upload photos and videos to their profile/feed and share them. React with custom emoticons and favorite other users posts. Uses Vuetify for styling and. Completely customize your profile with descriptions, cover photos, videos, and more.</p>
+          <p class="made-with">Made with Nuxt </p>
+          <a class="linkz" target="_blank" href="https://github.com/clew-bot/Altine"><img :src="Octocat" alt="" class="octo"></a>
+       
+        </div>
         <div :class="themeStore.theme+'proj-bg'">
           <img :src="altitude" alt="altitude" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">altitude</h1>
@@ -56,6 +75,10 @@ const themeStore = useThemeStore();
   </div>
 </template>
 <style>
+
+.altine {
+  font-size: .8rem;
+}
 
 .linkz{
   width: fit-content;
@@ -114,6 +137,11 @@ const themeStore = useThemeStore();
     border-radius: 10px;
   }
 
+  .purplev3 {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
   .made-with {
     position: absolute;
     bottom: 1rem;
@@ -141,6 +169,11 @@ const themeStore = useThemeStore();
     margin-bottom: 100px;
     color: rgb(242, 240, 240);
     margin-top: 4rem;
+  }
+
+  .purpleCont {
+
+    height: 590px !important;
   }
   
   .seeMore {
