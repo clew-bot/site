@@ -24,7 +24,7 @@ const themeStore = useThemeStore();
         <div :class="`${themeStore.theme}proj-bg`">
           <img :src="purplev3" alt="purplev3" class="proj-image">
           <h1 :class="themeStore.theme+'proj-title'">Purple v3</h1>
-          <p class="proj-desc altine">Purple v3 is a MMORPG Discord bot game with multiple functionalities. Users can grind skills by hunting, fishing, chopping, entering the dungeon, compete in fishing contests, and much more. Uses DiscordJS library and MongoDB for the database. (Repository is currently private)</p>
+          <p class="proj-desc altine">Purple v3 is a MMORPG Discord bot game with multiple functionalities. Users can grind skills by hunting, fishing, chopping, entering the dungeon, compete in fishing contests, and much more. Uses DiscordJS library and MongoDB for the database.</p>
           <p class="made-with">Made with Javascript </p>
           <a class="linkz" target="_blank" href="https://github.com/clew-bot/Purple_v3"><img :src="Octocat" alt="" class="octo"></a>
        
