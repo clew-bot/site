@@ -20,16 +20,15 @@ const themeStore = useThemeStore();
         <p><span class="check">✔</span> Javascript</p>
         <p><span class="check">✔</span> HTML</p>
         <p><span class="check">✔</span> CSS</p>
-        <p><span class="check">✔</span> Git</p>
         <p><span class="check">✔</span> Python</p>
       </div>
 
       </div>
       <div class="col">
-        <h2 :class="themeStore.theme+'expTitle'">Servers</h2>
+        <h2 :class="themeStore.theme+'expTitle'">Back-end</h2>
       <div class="list-container">
         <p><span class="check">✔</span> NodeJS</p>
-        <p><span class="check">✔</span> ExpressJS</p>
+        <p><span class="check">✔</span> NestJS</p>
         <p><span class="check">✔</span> Django</p>
       </div>
       </div>
@@ -39,6 +38,7 @@ const themeStore = useThemeStore();
         <p><span class="check">✔</span> Vue</p>
         <p><span class="check">✔</span> React</p>
         <p><span class="check">✔</span> Handlebars</p>
+        <p><span class="check">✔</span> Bootstrap</p>
         <p><span class="check">✔</span> Tailwind</p>
         <p><span class="check">✔</span> Vuetify</p>
         <p><span class="check">✔</span> Chakra</p>
@@ -49,9 +49,7 @@ const themeStore = useThemeStore();
       <div class="col">
         <h2 :class="themeStore.theme+'expTitle'">Databases</h2>
         <div class="list-container">
-        <p><span class="check">✔</span> SQL</p>
         <p><span class="check">✔</span> MongoDB</p>
-        <p><span class="check">✔</span> Mongoose</p>
         <p><span class="check">✔</span> PostgreSQL</p>
       </div>
       </div>
@@ -60,7 +58,6 @@ const themeStore = useThemeStore();
         <div class="list-container">
         <p><span class="check">✔</span> Docker</p>
         <p><span class="check">✔</span> AWS</p>
-        <p><span class="check">✔</span> PostgreSQL</p>
       </div>
       </div>
       <div class="col">
@@ -99,8 +96,8 @@ const themeStore = useThemeStore();
       </div>
       <div class="flex-cont">
         <div :class="themeStore.theme+'years-bg'">
-          <h2 :class="themeStore.theme+'first-header'"><i>50+</i></h2>
-          <h2><i>Leetcode solved</i></h2>
+          <h2 :class="themeStore.theme+'first-header'"><i>Lover of Web Development</i></h2>
+          <h2><i>Full-Stack Development</i></h2>
         </div>
         <div :class="themeStore.theme+'years-bg'">
           <h2 :class="themeStore.theme+'first-header'"><i>Countless</i></h2>
